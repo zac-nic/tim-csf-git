@@ -1,117 +1,119 @@
-@charset "UTF-8";
 /*
 Theme Name: TIM CSF GITHUB
 Author: Zachary Nicol-P.
 Description: C'est un thème pour le site web de la TIM.
 Version: 0.1
 */
+
 /* Styles généraux */
-/* line 9, sass/style.scss */
 * {
   box-sizing: border-box;
   max-width: 1000px;
-  margin: auto; }
+  margin: auto;
+}
 
-/* line 15, sass/style.scss */
 body {
-  font: .8em Verdana, Arial, Helvetica, sans-serif; }
+  font: .8em Verdana, Arial, Helvetica, sans-serif;
+}
 
 /* Structure générale */
-/* line 20, sass/style.scss */
 #en-tete, nav, #contenu, footer {
   max-width: 1000px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
-/* line 25, sass/style.scss */
 label.screen-reader-text {
-  display: block; }
+  display: block;
+}
 
-/* line 29, sass/style.scss */
 main, #article-seul {
-  border-bottom: 1px solid #333; }
+  border-bottom: 1px solid #333;
+}
 
 /* En-tête */
-/* line 34, sass/style.scss */
 #en-tete {
   background-color: #eee;
-  border-bottom: 1px solid #333; }
+  border-bottom: 1px solid #333;
+}
 
-/* line 39, sass/style.scss */
 #en-tete h1 {
   margin: 0;
-  padding: 10px; }
+  padding: 10px;
+}
 
 /* Barre de menu */
-/* line 45, sass/style.scss */
 nav {
-  border-bottom: 1px solid #333; }
+  border-bottom: 1px solid #333;
+}
 
-/* line 49, sass/style.scss */
 nav ul {
   list-style: none;
   margin: 10px 0 10px 10px;
-  padding: 0; }
+  padding: 0;
+}
 
-/* line 55, sass/style.scss */
 nav li {
   display: inline-block;
-  margin-right: 20px; }
+  margin-right: 20px;
+}
 
 /* Les articles en page d'accueil */
-/* line 61, sass/style.scss */
 article {
   border-bottom: 1px dotted #333;
-  padding-right: 8px; }
+  padding-right: 8px;
+}
 
-/* line 66, sass/style.scss */
 article header.titre-article a {
   text-decoration: none;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.3em;
-  color: #000; }
+  color: #000;
+}
+
 
 /* Le pied de page */
-/* line 75, sass/style.scss */
 footer {
   background-color: #eee;
   border-top: 1px solid #333;
-  clear: both; }
+  clear: both;
+}
 
-/* line 81, sass/style.scss */
 footer h2 {
   margin: 0;
   padding: 10px;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 /* Les articles en page seule */
-/* line 88, sass/style.scss */
 #article-seul {
-  /*padding-right: 8px;*/ }
+  /*padding-right: 8px;*/
+}
 
-/* line 92, sass/style.scss */
 .metadata {
   font-size: 0.8em;
-  color: gray; }
+  color: gray;
+}
 
 /* Les pages */
-/* line 98, sass/style.scss */
 .en-tete-page {
-  font-style: italic; }
+  font-style: italic;
+}
 
 /* Nous joindre */
-/* line 103, sass/style.scss */
 .joindre__telephone {
   color: #083C65;
-  font-family: "Bebas Neue";
-  font-size: 36px; }
 
+  font-family: "Bebas Neue";
+  font-size: 36px;
+}
 /* Règles pour grands écrans */
 @media only screen and (min-width: 735px) {
-  /* line 111, sass/style.scss */
   main, #article-seul {
     display: block;
-    border-bottom: none; }
+    border-bottom: none;
+  }
 
-  /* line 116, sass/style.scss */
   main, #article-seul {
-    width: 100%; } }
+    width: 100%;
+  }
+}

@@ -1,0 +1,37 @@
+/**
+* @author Zachary Nicol-P. <1735193@cegep-ste-foy.qc.ca>
+*/
+
+
+.hyperlien {
+  color: $hyperlien;
+  text-decoration: none;
+  text-transform: uppercase;
+  &--visited {
+    color: darken($hyperlien, 10%);
+  }
+  &--hover {
+    color: $bleuMoyen;
+  }
+  &--active {
+    color: $bleuMoyen;
+    text-decoration: underline;
+  }
+}
+a.hyperlien {
+  color: $hyperlien;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:visited {
+    color: darken($hyperlien, 10%);
+  }
+  &:hover {
+    color: $bleuMoyen;
+    cursor:pointer;
+  }
+  &:active {
+    color: $bleuMoyen;
+    text-decoration: underline;
+  }
+}
+

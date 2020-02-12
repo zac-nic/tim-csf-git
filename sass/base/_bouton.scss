@@ -1,0 +1,45 @@
+/**
+* @author Zachary Nicol-P. <1735193@cegep-ste-foy.qc.ca>
+*/
+
+.bouton {
+  background-color: $bleuMoyen;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 40px;
+  text-decoration: none;
+  box-shadow: $bleuPale 4px 4px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 10px;
+
+  &--hover {
+    background-color: $bleuFonce;
+  }
+
+  &--active {
+    background-color: $orange;
+    box-shadow: $bleuFonce 4px 4px;
+  }
+}
+
+a.bouton {
+  background-color: $bleuMoyen;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 40px;
+  text-decoration: none;
+  box-shadow: $bleuPale 4px 4px;
+  text-transform: uppercase;
+  display: inline-block;
+
+  &:hover {
+    background-color: $bleuFonce;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $orange;
+    box-shadow: $bleuFonce 4px 4px;
+  }
+}

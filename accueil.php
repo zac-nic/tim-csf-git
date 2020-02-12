@@ -7,7 +7,7 @@ Template Name: Accueil
 <picture class="imageEntete"><img src="https://via.placeholder.com/1000x680"/></picture>
 <h1 class="titre__h1">Accueil</h1>
 <div class="visionneuse">
-    <h2 class="titre__h2">GALERIE DE PROJETS</h2>
+    <h2 class="titre__h2">Galerie de projets</h2>
 </div>
 <div class="cestQuoi">
     <p class="cestQuoi__texte">La tim, c'est quoi?</p>

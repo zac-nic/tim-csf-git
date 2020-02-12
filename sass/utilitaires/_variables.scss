@@ -1,0 +1,30 @@
+/**
+* @author Zachary Nicol-P. <1735193@cegep-ste-foy.qc.ca>
+*/
+
+/** Polices de caractères **/
+
+@font-face {
+  font-family: Bebas Neue, sans-serif;
+  src: 	url('../../fonts/BebasNeue-Regular.ttf') format('truetype');
+  src: 	url('../../fonts/Oswald-Regular.ttf') format('truetype');
+}
+
+$fontePrimaire : Bebas Neue, sans-serif;
+$fonteSecondaire : Oswald, sans-serif;
+
+/** Palette de couleurs **/
+// Utiliser http://chir.ag/projects/name-that-color pour obtenir des noms uniques et mémorisables
+// Permettez-vous d'utiliser un nom de variable plus explicite si la suggestion de name-that-color est trop étrange
+
+/* Couleurs de base */
+$bleuFonce: #083C65;
+$bleuMoyen: #0B61A4;
+$bleuPale: #A9DAFF;
+$orange: #FF9200;
+
+/* Autres couleurs */
+$hyperlien: $bleuFonce;
+
+/** Points de rupture **/
+$desktop : 601px;

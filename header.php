@@ -20,8 +20,14 @@
 <body <?php body_class(); ?>>
 <header id="en-tete">
     <h1><?php bloginfo('name'); ?></h1>
+    <nav>
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'primary',
+            'menu_class' => 'primary-menu',
+        ));
+        ?>
+    </nav>
 </header>
-<nav>
-    <?php wp_nav_menu(); ?>
-</nav>
+
 <div id="content">

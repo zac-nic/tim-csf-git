@@ -682,83 +682,238 @@ a.bouton:active {
 /** Navigation **/
 /* line 2, sass/modules/_entete.scss */
 #en-tete .primary-menu {
-  background-color: white;
-  text-align: center; }
+  display: none; }
+@media (min-width: 601px) {
+  /* line 2, sass/modules/_entete.scss */
+  #en-tete .primary-menu {
+    display: flex;
+    background-color: white;
+    justify-content: center; } }
 
-/* line 8, sass/modules/_entete.scss */
+/* line 11, sass/modules/_entete.scss */
 #en-tete .primary-menu ul {
   list-style: none;
   margin: 10px 0 10px 10px;
   padding: 0; }
 
-/* line 15, sass/modules/_entete.scss */
+/* line 17, sass/modules/_entete.scss */
 #en-tete .primary-menu li {
   display: inline-block;
   margin-right: 20px; }
 
-/* line 21, sass/modules/_entete.scss */
+/* line 22, sass/modules/_entete.scss */
 #en-tete .primary-menu li a {
   color: black;
   text-decoration: none; }
-/* line 25, sass/modules/_entete.scss */
+/* line 26, sass/modules/_entete.scss */
 #en-tete .primary-menu li a:hover {
   color: #083C65; }
-/* line 29, sass/modules/_entete.scss */
+/* line 30, sass/modules/_entete.scss */
 #en-tete .primary-menu li a:active {
   color: #083C65;
   text-decoration: underline; }
 
-/* line 35, sass/modules/_entete.scss */
-.current_page_item, .current-menu-ancestor {
+/* line 37, sass/modules/_entete.scss */
+#en-tete .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px;
+  text-align: center; }
+@media (min-width: 601px) {
+  /* line 37, sass/modules/_entete.scss */
+  #en-tete .mobile-menu {
+    display: none; } }
+
+/* line 51, sass/modules/_entete.scss */
+#en-tete .mobile-menu li {
+  list-style-type: none;
+  padding: 15px 0; }
+
+/* line 56, sass/modules/_entete.scss */
+#en-tete .mobile-menu li a {
+  text-decoration: none; }
+
+/* line 60, sass/modules/_entete.scss */
+.current_page_item {
   text-decoration: underline; }
+
+/* line 64, sass/modules/_entete.scss */
+.entete {
+  background-color: #083C65;
+  border-bottom: #FF9200 solid 5px;
+  display: flex;
+  padding: 8px 0;
+  margin: 0;
+  min-width: 100%; }
+@media (min-width: 601px) {
+  /* line 64, sass/modules/_entete.scss */
+  .entete {
+    padding: 20px 0;
+    justify-content: center;
+    align-items: end; } }
+/* line 77, sass/modules/_entete.scss */
+.entete__h1 {
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  z-index: 10; }
+@media (min-width: 601px) {
+  /* line 77, sass/modules/_entete.scss */
+  .entete__h1 {
+    font-size: 36px; } }
+/* line 87, sass/modules/_entete.scss */
+.entete__flex {
+  display: flex;
+  align-items: flex-end; }
+@media (min-width: 601px) {
+  /* line 87, sass/modules/_entete.scss */
+  .entete__flex {
+    align-items: baseline; } }
+/* line 94, sass/modules/_entete.scss */
+.entete__flex--item {
+  justify-content: space-evenly; }
+@media (min-width: 601px) {
+  /* line 94, sass/modules/_entete.scss */
+  .entete__flex--item {
+    flex-direction: row;
+    justify-content: space-around; } }
+
+/* line 105, sass/modules/_entete.scss */
+.logoTim {
+  display: none; }
+@media (min-width: 601px) {
+  /* line 105, sass/modules/_entete.scss */
+  .logoTim {
+    display: initial;
+    width: 28px;
+    height: 28px;
+    margin-right: 5px; } }
+
+/* line 116, sass/modules/_entete.scss */
+.logoCegep {
+  display: none; }
+@media (min-width: 601px) {
+  /* line 116, sass/modules/_entete.scss */
+  .logoCegep {
+    display: initial;
+    width: 90px;
+    height: 35px;
+    margin-left: 30px; } }
+
+/* line 126, sass/modules/_entete.scss */
+.hamburger {
+  width: 42px;
+  height: 42px;
+  display: initial;
+  margin: 0 20px 0 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+/* line 136, sass/modules/_entete.scss */
+.hamburger:hover {
+  cursor: pointer; }
+@media (min-width: 601px) {
+  /* line 126, sass/modules/_entete.scss */
+  .hamburger {
+    display: none; } }
+
+/* line 145, sass/modules/_entete.scss */
+.close {
+  width: 42px;
+  height: 42px;
+  display: initial;
+  margin: 0 20px 0 10px;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+/* line 154, sass/modules/_entete.scss */
+.close:hover {
+  cursor: pointer; }
+@media (min-width: 601px) {
+  /* line 145, sass/modules/_entete.scss */
+  .close {
+    display: none; } }
+
+/* line 163, sass/modules/_entete.scss */
+#menuClose {
+  visibility: hidden; }
+
+/* line 167, sass/modules/_entete.scss */
+#menuHamburger {
+  visibility: visible; }
+
+/* line 171, sass/modules/_entete.scss */
+.conteneurMenu {
+  position: relative; }
+
+/* line 175, sass/modules/_entete.scss */
+#menuOuvert {
+  visibility: hidden; }
+
+/* line 179, sass/modules/_entete.scss */
+.menuOuvert {
+  background-color: #083C65;
+  position: relative;
+  height: 0;
+  margin: 0; }
+/* line 185, sass/modules/_entete.scss */
+.menuOuvert a {
+  color: white; }
+
+/* line 190, sass/modules/_entete.scss */
+.line {
+  stroke: #FF9200;
+  stroke-width: 5;
+  z-index: 10; }
 
 /* Styles généraux */
 /* line 32, sass/style.scss */
-body {
+#content {
   max-width: 1000px;
-  box-sizing: border-box;
   margin: 0 auto; }
 
 /* Structure générale */
-/* line 39, sass/style.scss */
+/* line 38, sass/style.scss */
 label.screen-reader-text {
   display: block; }
 
-/* line 43, sass/style.scss */
+/* line 42, sass/style.scss */
 main, #article-seul {
   border-bottom: 1px solid #333; }
 
 /* Les articles en page d'accueil */
-/* line 48, sass/style.scss */
+/* line 47, sass/style.scss */
 article {
   border-bottom: 1px dotted #333;
   padding-right: 8px; }
 
 /* Le pied de page */
-/* line 54, sass/style.scss */
+/* line 53, sass/style.scss */
 footer {
   background-color: #eee;
   border-top: 1px solid #333;
   clear: both; }
 
-/* line 60, sass/style.scss */
+/* line 59, sass/style.scss */
 footer h2 {
   margin: 0;
   padding: 10px;
   font-size: 1em; }
 
-/* line 66, sass/style.scss */
+/* line 65, sass/style.scss */
 .metadata {
   font-size: 0.8em;
   color: gray; }
 
 /* Règles pour grands écrans */
 @media only screen and (min-width: 735px) {
-  /* line 73, sass/style.scss */
+  /* line 72, sass/style.scss */
   main, #article-seul {
     display: block;
     border-bottom: none; }
 
-  /* line 78, sass/style.scss */
+  /* line 77, sass/style.scss */
   main, #article-seul {
     width: 100%; } }

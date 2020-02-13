@@ -12,22 +12,56 @@
             &mdash; <?php wp_title("", true); ?>
         <?php endif; ?>
     </title>
-    <link rel="stylesheet" href=" <?php bloginfo('template_url') ?> /css/kube.min.css">
     <link rel="stylesheet" href=" <?php bloginfo('stylesheet_url'); ?> ">
-    <script src=" <?php bloginfo('template_url') ?> /js/kube.min.js" type=" text/javascript "></script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <header id="en-tete">
-    <h1><?php bloginfo('name'); ?></h1>
-    <nav>
+    <div class="entete">
+        <div class="entete__flex">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/logoTim.svg"
+                 alt="Logo de la TIM"
+                 class="logoTim entete__flex--item">
+
+            <div class="conteneurMenu">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/hamburger.svg"
+                     alt="Menu hamburger"
+                     class="hamburger entete__flex--item"
+                     id="menuHamburger">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/close.svg"
+                     alt="Menu close"
+                     class="close entete__flex--item"
+                     id="menuClose">
+            </div>
+            <h1 class="entete__h1 entete__flex--item">Techniques d'Intégration Multimédia</h1>
+        </div>
+        <img src="<?php echo get_template_directory_uri(); ?>/images/logoCegep.png" alt="Logo du Cégep de Sainte-Foy"
+             class="logoCegep entete__flex entete__flex--item">
+    </div>
+    <div id="menuOuvert" class="menuOuvert">
+        <svg height="5" width="320">
+            <line x1="0" y1="0" x2="100" y2="100" class="line"/>
+        </svg>
+        <nav class="menu__mobile">
+            <?php
+            wp_nav_menu(array(
+                'menu' => 'navigation',
+                'menu_class' => 'mobile-menu',
+            ));
+            ?>
+        </nav>
+
+    </div>
+    <nav class="menu__large">
         <?php
         wp_nav_menu(array(
-            'theme_location' => 'primary',
+            'menu' => 'navigation',
             'menu_class' => 'primary-menu',
         ));
         ?>
     </nav>
+
+
 </header>
 
 <div id="content">

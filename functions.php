@@ -155,4 +155,6 @@ function tim_temoignage_custom_post()
 }
 
 add_action('init', 'tim_temoignage_custom_post', 0);
+
+wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), true );
 ?>

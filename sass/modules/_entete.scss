@@ -1,23 +1,24 @@
-// container class
+// Menu Poste de Table
 #en-tete .primary-menu {
-  background-color: white;
-  text-align: center;
+  display: none;
+  @media (min-width: $desktop) {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+  }
 }
 
-// container class first unordered list
 #en-tete .primary-menu ul {
   list-style: none;
   margin: 10px 0 10px 10px;
   padding: 0;
 }
 
-// each navigation item
 #en-tete .primary-menu li {
   display: inline-block;
   margin-right: 20px;
 }
 
-// each navigation item anchor
 #en-tete .primary-menu li a {
   color: black;
   text-decoration: none;
@@ -32,7 +33,162 @@
   }
 }
 
-.current_page_item,
-.current-menu-ancestor {
+// Menu Mobile
+#en-tete .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+#en-tete .mobile-menu ul {
+}
+
+#en-tete .mobile-menu li {
+  list-style-type: none;
+  padding: 15px 0;
+}
+
+#en-tete .mobile-menu li a {
+  text-decoration: none;
+}
+
+.current_page_item {
   text-decoration: underline;
+}
+
+.entete {
+  background-color: $bleuFonce;
+  border-bottom: $orange solid 5px;
+  display: flex;
+  padding: 8px 0;
+  margin: 0;
+  min-width: 100%;
+  @media(min-width: $desktop) {
+    padding: 20px 0;
+    justify-content: center;
+    align-items: end;
+  }
+
+  &__h1 {
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    z-index: 10;
+    @media (min-width: $desktop) {
+      font-size: 36px;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    align-items: flex-end;
+    @media (min-width: $desktop) {
+      align-items: baseline;
+    }
+
+    &--item {
+      justify-content: space-evenly;
+      @media (min-width: $desktop) {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  }
+
+}
+
+.logoTim {
+  display: none;
+  @media (min-width: $desktop) {
+    display: initial;
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
+  }
+
+}
+
+.logoCegep {
+  display: none;
+  @media (min-width: $desktop) {
+    display: initial;
+    width: 90px;
+    height: 35px;
+    margin-left: 30px;
+  }
+}
+
+.hamburger {
+  width: 42px;
+  height: 42px;
+  display: initial;
+  margin: 0 20px 0 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.close {
+  width: 42px;
+  height: 42px;
+  display: initial;
+  margin: 0 20px 0 10px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+#menuClose {
+  visibility: hidden;
+}
+
+#menuHamburger {
+  visibility: visible;
+}
+
+.conteneurMenu {
+  position: relative;
+}
+
+#menuOuvert {
+  visibility: hidden;
+}
+
+.menuOuvert {
+  background-color: $bleuFonce;
+  position: relative;
+  height: 0;
+  margin: 0;
+
+  & a {
+    color: white;
+  }
+}
+
+.line {
+  stroke: $orange;
+  stroke-width:5;
+  z-index:10;
 }

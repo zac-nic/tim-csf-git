@@ -46,13 +46,13 @@ function tim_responsable_custom_post()
 add_action('init', 'tim_responsable_custom_post', 0);
 
 // DIPLÔMÉ(E)
-function tim_diplome_custom_post()
+function tim_diplomes_custom_post()
 {
     $labels = array(
         // Nom au pluriel
         'name' => _x('Diplômé(e)s de la TIM', 'Post Type General Name'),
         // Nom au singulier
-        'singular_name' => _x('Diplômé(e)s', 'Post Type Singular Name'),
+        'singular_name' => _x('Diplômés', 'Post Type Singular Name'),
         // Le libellé affiché dans le menu
         'menu_name' => __('Diplômé(e)s'),
         // Les différents libellés de l'interface administrative
@@ -75,12 +75,12 @@ function tim_diplome_custom_post()
         'hierarchical' => false,
         'public' => true,
         'has_archive' => true,
-        'rewrite' => array('slug' => 'diplômés'),
+        'rewrite' => array('slug' => 'diplomes'),
     );
-    register_post_type('diplômés', $args);
+    register_post_type('diplomes', $args);
 }
 
-add_action('init', 'tim_diplome_custom_post', 0);
+add_action('init', 'tim_diplomes_custom_post', 0);
 
 // PROJET
 function tim_projet_custom_post()
@@ -149,9 +149,9 @@ function tim_temoignage_custom_post()
         'hierarchical' => false,
         'public' => true,
         'has_archive' => true,
-        'rewrite' => array('slug' => 'témoignages'),
+        'rewrite' => array('slug' => 'temoignages'),
     );
-    register_post_type('témoignages', $args);
+    register_post_type('temoignages', $args);
 }
 
 add_action('init', 'tim_temoignage_custom_post', 0);

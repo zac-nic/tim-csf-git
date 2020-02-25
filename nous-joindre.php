@@ -4,43 +4,79 @@ Template Name: Nous joindre
 */
 ?>
 <?php get_header(); ?>
-<picture class="imageEntete"><img src="https://via.placeholder.com/1000x680"/></picture>
-<div class="nousJoindreDescription">
-    <h1>Nous joindre</h1>
-    <p>Si tu préfères parler directement au responsable, appelle au <span
-                class="joindre__telephone">(418) 659-6600</span>
-        et saisi ensuite le numéro de poste de la personne que tu souhaites rejoindre.</p>
-</div>
-
-<div class="responsables">
-    <ul class="responsable__liste">
+<img class="imageEntete" alt="image d'entête" src="https://via.placeholder.com/1000x680"/>
+<div class="conteneurGeneral">
+    <div class="nousJoindre__description">
+        <h1 class="nousJoindre__titre">Nous joindre</h1>
+        <p class="nousJoindre__texte">Si tu préfères parler directement au responsable, appelle au <span
+                    class="nousJoindre__telephone">(418) 659-6600</span> et saisi ensuite le numéro de poste de la
+            personne que tu souhaites rejoindre.</p>
+    </div>
+    <div class="responsables">
         <?php
-        // Sylvain = 163
-        // Michel = 164
-        // Michelle = 165
-        // Benoit = 166
+        $posts = get_posts(array(
+            'posts_per_page' => -1,
+            'post_type' => 'responsables',
+            'post_status' => 'publish',
+        ));
+        if ($posts) : ?>
+            <ul class="responsables__liste">
+                <?php foreach ($posts as $post): ?>
+                    <li class="responsables__item">
+                        <img src="https://via.placeholder.com/235x235" alt="" class="responsables__image">
+                        <div class="responsables__item--conteneur">
+                            <p class="responsables__nom">
+                                <?php echo get_field('prenom', $post) ?>
+                                <?php echo get_field('nom', $post) ?>
+                            </p>
+                            <p class="responsables__responsabilite">
+                                <?php echo get_field('responsabilite', $post) ?>
+                            </p>
+                            <p class="responsables__poste">
+                                Poste #<?php echo get_field('telephone', $post) ?>
+                            </p>
+                        </div>
 
-        $arrIdResponsables = [163, 164, 165, 166];
-        for ($cpt = 0; $cpt < count($arrIdResponsables); $cpt++) {
-            $arrPrenomNom[$cpt] = get_field('prenom', $arrIdResponsables[$cpt]) . " " . get_field('nom', $arrIdResponsables[$cpt]);
-            $arrResponsabilite[$cpt] = get_field('responsabilite', $arrIdResponsables[$cpt]);
-            $arrPoste[$cpt] = get_field('telephone', $arrIdResponsables[$cpt]);
-            $arrCourriel[$cpt] = get_field('courriel_responsable', $arrIdResponsables[$cpt]);
-            ?>
-            <li class="responsable__item">
-                <img src="https://via.placeholder.com/235x235" alt="" class="responsable__image">
-                <div class="responsable__description">
-                    <p class="responsable__nom"><?php echo $arrPrenomNom[$cpt] ?></p>
-                    <p class="responsable__responsabilite"><?php echo $arrResponsabilite[$cpt] ?></p>
-                    <p class="responsable__poste"><?php echo $arrPoste[$cpt] ?></p>
-                </div>
-            </li>
-        <?php } ?>
-    </ul>
-</div>
-<div class="formulaireContact">
-    <h2 class="formulaireTitre">Formulaire de contact</h2>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
+    </div>
+    <div class="formulaireContact">
+        <h2 class="formulaireTitre">Formulaire de contact</h2>
+        <form action="">
+            <label for="nom">Nom complet :</label>
+            <input id="nom" type="text">
+            <span class="messageErreur--nom"></span>
+            <label for="courriel">Courriel :</label>
+            <input id="courriel" type="text">
+            <span class="messageErreur--courriel"></span>
+            <?php
+            $posts = get_posts(array(
+                'posts_per_page' => -1,
+                'post_type' => 'responsables',
+                'post_status' => 'publish',
+            ));
+            if ($posts) : ?>
+                <label for="destinataire">Destinataire :</label>
+                <select id="destinataire">
+                    <option value="">Choisir un destinataire</option>
+                    <?php foreach ($posts as $post): ?>
+                        <option value="<?php echo get_field('courriel', $post) ?>">
+                            <?php echo get_field('prenom', $post) ?>
+                            <?php echo get_field('nom', $post) ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+                <span class="messageErreur--destinataire"></span>
+            <?php endif; ?>
+            <label for="sujet">Sujet :</label>
+            <input type="text" id="sujet">
+            <span class="messageErreur--sujet"></span>
 
+        </form>
+    </div>
 </div>
+
 
 <?php get_footer() ?>

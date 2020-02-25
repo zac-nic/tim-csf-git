@@ -1,0 +1,82 @@
+.nousJoindre {
+  &__titre {
+    margin-top: 5%;
+    text-align: center;
+  }
+
+  &__description {
+
+  }
+
+  &__texte {
+    width: 100%;
+    margin: 0 auto;
+    @media(min-width: $desktop) {
+      width: 660px;
+    }
+  }
+
+  &__telephone {
+    color: $bleuFonce;
+    font-size: 24px;
+    font-family: "Bebas Neue";
+    @media(min-width: $desktop) {
+      font-size: 36px;
+    }
+  }
+}
+
+.responsables {
+  font-size: 18px;
+  @media (min-width: $desktop) {
+    font-size: 24px;
+  }
+
+
+  &__liste {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    @media(min-width: $desktop) {
+      align-items: flex-start;
+      //flex-wrap: wrap;
+      flex-flow: column wrap;
+      flex-direction: initial;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+    @media(min-width: $desktop) {
+      width: 40%;
+    }
+
+    &--conteneur {
+      display: flex;
+      padding-left: 10px;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      & p {
+        margin: 0;
+      }
+    }
+  }
+
+  &__poste {
+    color: $bleuFonce;
+    font-size: 24px;
+    font-family: "Bebas Neue";
+    @media(min-width: $desktop) {
+      font-size: 36px;
+    }
+  }
+
+  &__image {
+    max-height: 235px;
+  }
+}

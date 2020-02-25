@@ -1,0 +1,44 @@
+.piedDePage {
+  &__conteneur {
+    background-color: $bleuFonce;
+    color: white;
+    text-align: center;
+    padding-bottom: 2%;
+
+    & small {
+      padding: 0 2%;
+    }
+  }
+
+  &__navigation a {
+    color: white;
+    text-decoration: none;
+  }
+
+  &__navigation ul {
+    list-style-type: none;
+    display: block;
+    justify-content: center;
+    padding: 0;
+    margin: 2% 0;
+    @media(min-width: $desktop) {
+      display: flex;
+    }
+  }
+
+  &__navigation li {
+    margin: 4% 0;
+    @media(min-width: $desktop) {
+      margin: 0 2%;
+    }
+  }
+
+  &__ligneOrange {
+    border-bottom: $orange 5px solid;
+    width: 300px;
+    margin: 2% auto;
+    @media (min-width: $desktop) {
+      width: 660px;
+    }
+  }
+}

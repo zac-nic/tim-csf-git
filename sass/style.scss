@@ -18,6 +18,8 @@ Version: 0.1
 @import 'base/hyperlien';
 /** Boutons **/
 @import 'base/bouton';
+/** Styles généraux **/
+@import 'base/general';
 /****** MODULES ******/
 /** gds - Styles généraux du Guide de styles **/
 @import 'modules/gds';
@@ -27,6 +29,12 @@ Version: 0.1
 @import 'modules/listeInteractivite';
 /** Navigation **/
 @import 'modules/entete';
+/** Pied de page **/
+@import 'modules/piedDePage';
+/** Stages **/
+@import 'modules/stages';
+/** Nous Joindre **/
+@import 'modules/nousJoindre';
 
 /* Styles généraux */
 #content {

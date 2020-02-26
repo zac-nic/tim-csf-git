@@ -1,0 +1,166 @@
+.accueil {
+  &__h1 {
+    text-align: center;
+  }
+
+  &__h2 {
+    text-align: center;
+  }
+}
+
+.cestQuoi {
+  display: flex;
+  flex-direction: column;
+  @media(min-width: $desktop) {
+    flex-direction: row;
+  }
+
+  &__image {
+    width: 100%;
+    margin-top: 10px;
+    @media(min-width: $desktop) {
+      width: 50%;
+      height: 50%;
+      margin: auto 0 auto 20px;
+    }
+  }
+}
+
+.competences {
+  &__conteneur {
+    width: auto;
+    margin-bottom: 10px;
+    @media(min-width: $desktop) {
+      margin: 10px;
+      width: 100%;
+    }
+  }
+
+  &__rangee1 {
+    @media(min-width: $desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__rangee2 {
+    @media(min-width: $desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__nom {
+    font-size: 22px;
+    @media(min-width: $desktop) {
+      font-size: 24px;
+      margin-top: 0;
+    }
+  }
+
+  &__texte1 {
+    padding: 10px;
+    margin: 0;
+    background-color: $bleuPale;
+    @media (min-width: $desktop) {
+      min-height: 160px;
+      padding: 20px;
+    }
+  }
+
+  &__texte2 {
+    padding: 10px;
+    margin: 0;
+    background-color: $bleuPale;
+    @media (min-width: $desktop) {
+      height: 220px;
+      padding: 20px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+.temoignages {
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  &__infos {
+    display: flex;
+    font-size: 16px;
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: space-between;
+
+    & p {
+      margin: 5px 0;
+    }
+  }
+
+  &__conteneur {
+    background-color: $bleuFonce;
+    color: white;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $desktop) {
+      width: 48%;
+    }
+  }
+
+  &__nom {
+    font-family: "Bebas Neue";
+    font-size: 24px;
+  }
+
+  &__image {
+    width: 50%;
+    height: 50%;
+    margin: 8px 0 0 8px;
+  }
+
+  &__temoignage {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  &__entreprise {
+    color: white;
+  }
+
+}
+
+.etudiantUnJour, .profil, .grilleCours, .questions {
+  text-align: center;
+  @media(min-width: $desktop) {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.inscrire {
+  color: white;
+  background-color: $bleuFonce;
+  padding: 10px;
+  @media (min-width: $desktop) {
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px 30px 30px 30px;
+  }
+}
+
+.convaincu {
+  background-color: $bleuPale;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}

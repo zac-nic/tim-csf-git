@@ -77,10 +77,12 @@
   &__h1 {
     text-align: center;
     color: white;
-    font-size: 28px;
+    font-size: 22px;
     z-index: 10;
+    margin: auto auto;
     @media (min-width: $desktop) {
       font-size: 36px;
+      margin: 0;
     }
   }
 
@@ -100,6 +102,10 @@
     }
   }
 
+  &__ligneOrange {
+    border: $orange 3px solid;
+    margin: 0;
+  }
 }
 
 .logoTim {
@@ -120,6 +126,13 @@
     width: 90px;
     height: 35px;
     margin-left: 30px;
+  }
+
+  &--mobile {
+    width: 40%;
+    display: flex;
+    margin: 0 auto;
+    padding: 20px 0;
   }
 }
 
@@ -185,12 +198,6 @@
   & a {
     color: white;
   }
-}
-
-.line {
-  stroke: $orange;
-  stroke-width: 5;
-  z-index: 10;
 }
 
 /** IMAGES D'EN-TÊTE **/

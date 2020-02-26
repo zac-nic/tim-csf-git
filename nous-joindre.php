@@ -4,14 +4,17 @@ Template Name: Nous joindre
 */
 ?>
 <?php get_header(); ?>
-<img class="imageEntete" alt="image d'entête" src="https://via.placeholder.com/1000x680"/>
+<img class="imageEntete" alt="image d'entête" src="<?php echo get_template_directory_uri(); ?>/images/entete-nousJoindre.jpg"/>
 <div class="conteneurGeneral">
+    <hr class="ligneOrange ligneOrange__gauche"/>
     <div class="nousJoindre__description">
+
         <h1 class="nousJoindre__titre">Nous joindre</h1>
         <p class="nousJoindre__texte">Si tu préfères parler directement au responsable, appelle au <span
                     class="nousJoindre__telephone">(418) 659-6600</span> et saisi ensuite le numéro de poste de la
             personne que tu souhaites rejoindre.</p>
     </div>
+    <hr class="ligneOrange ligneOrange__droite"/>
     <div class="responsables">
         <?php
         $posts = get_posts(array(
@@ -42,9 +45,12 @@ Template Name: Nous joindre
             </ul>
         <?php endif; ?>
     </div>
-    <div class="formulaireContact">
-        <h2 class="formulaireTitre">Formulaire de contact</h2>
-        <form action="">
+
+    <hr class="ligneOrange ligneOrange__gauche"/>
+
+    <div class="formulaire__conteneur">
+        <h2 class="formulaire__titre">Formulaire de contact</h2>
+        <form class="formulaire" action="">
             <label for="nom">Nom complet :</label>
             <input id="nom" type="text">
             <span class="messageErreur--nom"></span>
@@ -73,7 +79,10 @@ Template Name: Nous joindre
             <label for="sujet">Sujet :</label>
             <input type="text" id="sujet">
             <span class="messageErreur--sujet"></span>
-
+            <label for="message">Message :</label>
+            <textarea name="message" id="message" rows="5"></textarea>
+            <span class="messageErreur--message"></span>
+            <input class="formulaire__btnEnvoyer" id="envoyer" type="submit">
         </form>
     </div>
 </div>

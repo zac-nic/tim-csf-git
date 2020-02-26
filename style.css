@@ -587,6 +587,7 @@ a.bouton:active {
   box-shadow: #083C65 4px 4px; }
 
 /** Styles généraux **/
+/** Margin de 10px sur toutes les pages en version mobile **/
 /* line 2, sass/base/_general.scss */
 .conteneurGeneral {
   margin: 0 10px 0 10px; }
@@ -594,6 +595,44 @@ a.bouton:active {
   /* line 2, sass/base/_general.scss */
   .conteneurGeneral {
     margin: 0; } }
+
+/** Styles pour les lignes oranges décoratives **/
+/* line 10, sass/base/_general.scss */
+.ligneOrange {
+  border: #FF9200 3px solid;
+  margin: 20px 0; }
+@media (min-width: 601px) {
+  /* line 10, sass/base/_general.scss */
+  .ligneOrange {
+    display: block;
+    margin: 0;
+    width: 660px; }
+  /* line 17, sass/base/_general.scss */
+  .ligneOrange__droite {
+    margin: 30px 0 30px auto; }
+  /* line 20, sass/base/_general.scss */
+  .ligneOrange__gauche {
+    margin: 30px auto 30px 0; } }
+
+/** Styles pour les titres sur carré bleu **/
+/* line 28, sass/base/_general.scss */
+.carreBleu {
+  background-color: #083C65;
+  color: white;
+  width: 100%;
+  display: flex;
+  font-family: "Bebas Neue";
+  font-size: 3rem; }
+@media (min-width: 601px) {
+  /* line 28, sass/base/_general.scss */
+  .carreBleu {
+    font-size: 10rem;
+    width: 500px;
+    height: 400px; } }
+/* line 41, sass/base/_general.scss */
+.carreBleu__texte {
+  padding: 10px;
+  margin: auto auto; }
 
 /****** MODULES ******/
 /** gds - Styles généraux du Guide de styles **/
@@ -765,52 +804,64 @@ a.bouton:active {
 .entete__h1 {
   text-align: center;
   color: white;
-  font-size: 28px;
-  z-index: 10; }
+  font-size: 22px;
+  z-index: 10;
+  margin: auto auto; }
 @media (min-width: 601px) {
   /* line 77, sass/modules/_entete.scss */
   .entete__h1 {
-    font-size: 36px; } }
-/* line 87, sass/modules/_entete.scss */
+    font-size: 36px;
+    margin: 0; } }
+/* line 89, sass/modules/_entete.scss */
 .entete__flex {
   display: flex;
   align-items: flex-end; }
 @media (min-width: 601px) {
-  /* line 87, sass/modules/_entete.scss */
+  /* line 89, sass/modules/_entete.scss */
   .entete__flex {
     align-items: baseline; } }
-/* line 94, sass/modules/_entete.scss */
+/* line 96, sass/modules/_entete.scss */
 .entete__flex--item {
   justify-content: space-evenly; }
 @media (min-width: 601px) {
-  /* line 94, sass/modules/_entete.scss */
+  /* line 96, sass/modules/_entete.scss */
   .entete__flex--item {
     flex-direction: row;
     justify-content: space-around; } }
-
 /* line 105, sass/modules/_entete.scss */
+.entete__ligneOrange {
+  border: #FF9200 3px solid;
+  margin: 0; }
+
+/* line 111, sass/modules/_entete.scss */
 .logoTim {
   display: none; }
 @media (min-width: 601px) {
-  /* line 105, sass/modules/_entete.scss */
+  /* line 111, sass/modules/_entete.scss */
   .logoTim {
     display: initial;
     width: 28px;
     height: 28px;
     margin-right: 5px; } }
 
-/* line 116, sass/modules/_entete.scss */
+/* line 122, sass/modules/_entete.scss */
 .logoCegep {
   display: none; }
 @media (min-width: 601px) {
-  /* line 116, sass/modules/_entete.scss */
+  /* line 122, sass/modules/_entete.scss */
   .logoCegep {
     display: initial;
     width: 90px;
     height: 35px;
     margin-left: 30px; } }
+/* line 131, sass/modules/_entete.scss */
+.logoCegep--mobile {
+  width: 40%;
+  display: flex;
+  margin: 0 auto;
+  padding: 20px 0; }
 
-/* line 126, sass/modules/_entete.scss */
+/* line 139, sass/modules/_entete.scss */
 .hamburger {
   width: 42px;
   height: 42px;
@@ -820,15 +871,15 @@ a.bouton:active {
   top: 0;
   left: 0;
   z-index: 1; }
-/* line 136, sass/modules/_entete.scss */
+/* line 149, sass/modules/_entete.scss */
 .hamburger:hover {
   cursor: pointer; }
 @media (min-width: 601px) {
-  /* line 126, sass/modules/_entete.scss */
+  /* line 139, sass/modules/_entete.scss */
   .hamburger {
     display: none; } }
 
-/* line 145, sass/modules/_entete.scss */
+/* line 158, sass/modules/_entete.scss */
 .close {
   width: 42px;
   height: 42px;
@@ -837,52 +888,46 @@ a.bouton:active {
   top: 0;
   left: 0;
   z-index: 1; }
-/* line 154, sass/modules/_entete.scss */
+/* line 167, sass/modules/_entete.scss */
 .close:hover {
   cursor: pointer; }
 @media (min-width: 601px) {
-  /* line 145, sass/modules/_entete.scss */
+  /* line 158, sass/modules/_entete.scss */
   .close {
     display: none; } }
 
-/* line 163, sass/modules/_entete.scss */
+/* line 176, sass/modules/_entete.scss */
 #menuClose {
   visibility: hidden; }
 
-/* line 167, sass/modules/_entete.scss */
+/* line 180, sass/modules/_entete.scss */
 #menuHamburger {
   visibility: visible; }
 
-/* line 171, sass/modules/_entete.scss */
+/* line 184, sass/modules/_entete.scss */
 .conteneurMenu {
   position: relative; }
 
-/* line 175, sass/modules/_entete.scss */
+/* line 188, sass/modules/_entete.scss */
 #menuOuvert {
   visibility: hidden; }
 
-/* line 179, sass/modules/_entete.scss */
+/* line 192, sass/modules/_entete.scss */
 .menuOuvert {
   background-color: #083C65;
   position: relative;
   height: 0;
   margin: 0; }
-/* line 185, sass/modules/_entete.scss */
+/* line 198, sass/modules/_entete.scss */
 .menuOuvert a {
   color: white; }
 
-/* line 190, sass/modules/_entete.scss */
-.line {
-  stroke: #FF9200;
-  stroke-width: 5;
-  z-index: 10; }
-
 /** IMAGES D'EN-TÊTE **/
-/* line 197, sass/modules/_entete.scss */
+/* line 204, sass/modules/_entete.scss */
 .imageEntete {
   width: 100vw; }
 @media (min-width: 601px) {
-  /* line 197, sass/modules/_entete.scss */
+  /* line 204, sass/modules/_entete.scss */
   .imageEntete {
     width: 100%; } }
 
@@ -928,127 +973,405 @@ a.bouton:active {
   .piedDePage__ligneOrange {
     width: 660px; } }
 
+/** Accueil **/
+/* line 2, sass/modules/_accueil.scss */
+.accueil__h1 {
+  text-align: center; }
+/* line 6, sass/modules/_accueil.scss */
+.accueil__h2 {
+  text-align: center; }
+
+/* line 11, sass/modules/_accueil.scss */
+.cestQuoi {
+  display: flex;
+  flex-direction: column; }
+@media (min-width: 601px) {
+  /* line 11, sass/modules/_accueil.scss */
+  .cestQuoi {
+    flex-direction: row; } }
+/* line 18, sass/modules/_accueil.scss */
+.cestQuoi__image {
+  width: 100%;
+  margin-top: 10px; }
+@media (min-width: 601px) {
+  /* line 18, sass/modules/_accueil.scss */
+  .cestQuoi__image {
+    width: 50%;
+    height: 50%;
+    margin: auto 0 auto 20px; } }
+
+/* line 30, sass/modules/_accueil.scss */
+.competences__conteneur {
+  width: auto;
+  margin-bottom: 10px; }
+@media (min-width: 601px) {
+  /* line 30, sass/modules/_accueil.scss */
+  .competences__conteneur {
+    margin: 10px;
+    width: 100%; } }
+@media (min-width: 601px) {
+  /* line 39, sass/modules/_accueil.scss */
+  .competences__rangee1 {
+    display: flex;
+    justify-content: space-between; } }
+@media (min-width: 601px) {
+  /* line 46, sass/modules/_accueil.scss */
+  .competences__rangee2 {
+    display: flex;
+    justify-content: space-between; } }
+/* line 53, sass/modules/_accueil.scss */
+.competences__nom {
+  font-size: 22px; }
+@media (min-width: 601px) {
+  /* line 53, sass/modules/_accueil.scss */
+  .competences__nom {
+    font-size: 24px;
+    margin-top: 0; } }
+/* line 61, sass/modules/_accueil.scss */
+.competences__texte1 {
+  padding: 10px;
+  margin: 0;
+  background-color: #A9DAFF; }
+@media (min-width: 601px) {
+  /* line 61, sass/modules/_accueil.scss */
+  .competences__texte1 {
+    min-height: 160px;
+    padding: 20px; } }
+/* line 71, sass/modules/_accueil.scss */
+.competences__texte2 {
+  padding: 10px;
+  margin: 0;
+  background-color: #A9DAFF; }
+@media (min-width: 601px) {
+  /* line 71, sass/modules/_accueil.scss */
+  .competences__texte2 {
+    height: 220px;
+    padding: 20px; } }
+/* line 81, sass/modules/_accueil.scss */
+.competences__image {
+  width: 100%; }
+
+@media (min-width: 601px) {
+  /* line 86, sass/modules/_accueil.scss */
+  .temoignages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; } }
+/* line 93, sass/modules/_accueil.scss */
+.temoignages__infos {
+  display: flex;
+  font-size: 16px; }
+/* line 98, sass/modules/_accueil.scss */
+.temoignages__flex {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  justify-content: space-between; }
+/* line 104, sass/modules/_accueil.scss */
+.temoignages__flex p {
+  margin: 5px 0; }
+/* line 109, sass/modules/_accueil.scss */
+.temoignages__conteneur {
+  background-color: #083C65;
+  color: white;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column; }
+@media (min-width: 601px) {
+  /* line 109, sass/modules/_accueil.scss */
+  .temoignages__conteneur {
+    width: 48%; } }
+/* line 120, sass/modules/_accueil.scss */
+.temoignages__nom {
+  font-family: "Bebas Neue";
+  font-size: 24px; }
+/* line 125, sass/modules/_accueil.scss */
+.temoignages__image {
+  width: 50%;
+  height: 50%;
+  margin: 8px 0 0 8px; }
+/* line 131, sass/modules/_accueil.scss */
+.temoignages__temoignage {
+  padding: 10px;
+  font-size: 16px; }
+/* line 136, sass/modules/_accueil.scss */
+.temoignages__entreprise {
+  color: white; }
+
+/* line 142, sass/modules/_accueil.scss */
+.etudiantUnJour, .profil, .grilleCours, .questions {
+  text-align: center; }
+@media (min-width: 601px) {
+  /* line 142, sass/modules/_accueil.scss */
+  .etudiantUnJour, .profil, .grilleCours, .questions {
+    width: 50%;
+    margin: 0 auto; } }
+
+/* line 150, sass/modules/_accueil.scss */
+.inscrire {
+  color: white;
+  background-color: #083C65;
+  padding: 10px; }
+@media (min-width: 601px) {
+  /* line 150, sass/modules/_accueil.scss */
+  .inscrire {
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px 30px 30px 30px; } }
+
+/* line 161, sass/modules/_accueil.scss */
+.convaincu {
+  background-color: #A9DAFF;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px; }
+
 /** Stages **/
+/* line 2, sass/modules/_stages.scss */
+.stages__description {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%; }
+@media (min-width: 601px) {
+  /* line 2, sass/modules/_stages.scss */
+  .stages__description {
+    width: 50%; } }
+/* line 12, sass/modules/_stages.scss */
+.stages__titre {
+  text-align: center;
+  padding-top: 15px; }
+/* line 17, sass/modules/_stages.scss */
+.stages__infos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto; }
+@media (min-width: 601px) {
+  /* line 17, sass/modules/_stages.scss */
+  .stages__infos {
+    width: 70%; } }
+/* line 27, sass/modules/_stages.scss */
+.stages__infos--conteneur1 {
+  padding: 10px;
+  background-color: #A9DAFF; }
+@media (min-width: 601px) {
+  /* line 27, sass/modules/_stages.scss */
+  .stages__infos--conteneur1 {
+    padding: 5% 10%; } }
+/* line 34, sass/modules/_stages.scss */
+.stages__infos--conteneur1 h2 {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 24px; }
+@media (min-width: 601px) {
+  /* line 34, sass/modules/_stages.scss */
+  .stages__infos--conteneur1 h2 {
+    width: 70%; } }
+/* line 45, sass/modules/_stages.scss */
+.stages__infos--conteneur2 {
+  padding: 10px;
+  background-color: #083C65;
+  color: white; }
+@media (min-width: 601px) {
+  /* line 45, sass/modules/_stages.scss */
+  .stages__infos--conteneur2 {
+    padding: 5% 10%; } }
+/* line 53, sass/modules/_stages.scss */
+.stages__infos--conteneur2 h2 {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 24px; }
+@media (min-width: 601px) {
+  /* line 53, sass/modules/_stages.scss */
+  .stages__infos--conteneur2 h2 {
+    width: 70%; } }
+/* line 65, sass/modules/_stages.scss */
+.stages__employeur {
+  text-align: center;
+  margin-bottom: 30px; }
+@media (min-width: 601px) {
+  /* line 65, sass/modules/_stages.scss */
+  .stages__employeur {
+    display: flex;
+    align-content: center; } }
+/* line 74, sass/modules/_stages.scss */
+.stages__employeur--conteneur2 a {
+  margin-top: 10px; }
+@media (min-width: 601px) {
+  /* line 73, sass/modules/_stages.scss */
+  .stages__employeur--conteneur2 {
+    width: 40%;
+    margin: auto auto; } }
+
 /** Nous Joindre **/
 /* line 2, sass/modules/_nousJoindre.scss */
 .nousJoindre__titre {
-  margin-top: 5%;
   text-align: center; }
-/* line 11, sass/modules/_nousJoindre.scss */
+@media (min-width: 601px) {
+  /* line 6, sass/modules/_nousJoindre.scss */
+  .nousJoindre__description {
+    padding-top: 20px;
+    padding-bottom: 20px; } }
+/* line 14, sass/modules/_nousJoindre.scss */
 .nousJoindre__texte {
   width: 100%;
   margin: 0 auto; }
 @media (min-width: 601px) {
-  /* line 11, sass/modules/_nousJoindre.scss */
+  /* line 14, sass/modules/_nousJoindre.scss */
   .nousJoindre__texte {
-    width: 660px; } }
-/* line 19, sass/modules/_nousJoindre.scss */
+    width: 660px;
+    padding-top: 20px;
+    padding-bottom: 20px; } }
+/* line 24, sass/modules/_nousJoindre.scss */
 .nousJoindre__telephone {
   color: #083C65;
   font-size: 24px;
   font-family: "Bebas Neue"; }
 @media (min-width: 601px) {
-  /* line 19, sass/modules/_nousJoindre.scss */
+  /* line 24, sass/modules/_nousJoindre.scss */
   .nousJoindre__telephone {
     font-size: 36px; } }
 
-/* line 29, sass/modules/_nousJoindre.scss */
+/* line 34, sass/modules/_nousJoindre.scss */
 .responsables {
   font-size: 18px; }
 @media (min-width: 601px) {
-  /* line 29, sass/modules/_nousJoindre.scss */
+  /* line 34, sass/modules/_nousJoindre.scss */
   .responsables {
     font-size: 24px; } }
-/* line 36, sass/modules/_nousJoindre.scss */
+/* line 41, sass/modules/_nousJoindre.scss */
 .responsables__liste {
   display: flex;
   flex-direction: column;
   list-style-type: none;
   padding: 0; }
 @media (min-width: 601px) {
-  /* line 36, sass/modules/_nousJoindre.scss */
+  /* line 41, sass/modules/_nousJoindre.scss */
   .responsables__liste {
     align-items: flex-start;
     flex-flow: column wrap;
     flex-direction: initial;
     justify-content: space-evenly; } }
-/* line 50, sass/modules/_nousJoindre.scss */
+/* line 54, sass/modules/_nousJoindre.scss */
 .responsables__item {
-  display: flex;
-  margin-bottom: 10px;
-  justify-content: space-evenly; }
+  display: inline;
+  margin: 10px auto; }
 @media (min-width: 601px) {
-  /* line 50, sass/modules/_nousJoindre.scss */
+  /* line 54, sass/modules/_nousJoindre.scss */
   .responsables__item {
-    width: 40%; } }
-/* line 58, sass/modules/_nousJoindre.scss */
+    width: 40%;
+    display: flex; } }
+/* line 62, sass/modules/_nousJoindre.scss */
 .responsables__item--conteneur {
-  display: flex;
-  padding-left: 10px;
-  flex-direction: column;
-  justify-content: space-evenly; }
-/* line 64, sass/modules/_nousJoindre.scss */
+  text-align: center; }
+@media (min-width: 601px) {
+  /* line 62, sass/modules/_nousJoindre.scss */
+  .responsables__item--conteneur {
+    display: flex;
+    padding-left: 10px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left; } }
+/* line 72, sass/modules/_nousJoindre.scss */
 .responsables__item--conteneur p {
   margin: 0; }
-/* line 70, sass/modules/_nousJoindre.scss */
+/* line 78, sass/modules/_nousJoindre.scss */
 .responsables__poste {
   color: #083C65;
   font-size: 24px;
   font-family: "Bebas Neue"; }
 @media (min-width: 601px) {
-  /* line 70, sass/modules/_nousJoindre.scss */
+  /* line 78, sass/modules/_nousJoindre.scss */
   .responsables__poste {
     font-size: 36px; } }
-/* line 79, sass/modules/_nousJoindre.scss */
+/* line 87, sass/modules/_nousJoindre.scss */
 .responsables__image {
   max-height: 235px; }
 
+/* line 92, sass/modules/_nousJoindre.scss */
+.formulaire {
+  display: flex;
+  flex-flow: column;
+  align-content: center; }
+@media (min-width: 601px) {
+  /* line 92, sass/modules/_nousJoindre.scss */
+  .formulaire {
+    width: 40%;
+    margin: 0 auto; } }
+/* line 101, sass/modules/_nousJoindre.scss */
+.formulaire__conteneur {
+  margin-bottom: 5%; }
+/* line 105, sass/modules/_nousJoindre.scss */
+.formulaire__titre {
+  text-align: center; }
+/* line 109, sass/modules/_nousJoindre.scss */
+.formulaire input {
+  margin: 5px 0 15px 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px; }
+/* line 116, sass/modules/_nousJoindre.scss */
+.formulaire select {
+  margin: 5px 0 15px 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px; }
+/* line 123, sass/modules/_nousJoindre.scss */
+.formulaire textarea {
+  margin: 5px 0 15px 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px; }
+
 /* Styles généraux */
-/* line 40, sass/style.scss */
+/* line 42, sass/style.scss */
 #content {
   max-width: 1000px;
   margin: 0 auto; }
 
 /* Structure générale */
-/* line 46, sass/style.scss */
+/* line 48, sass/style.scss */
 label.screen-reader-text {
   display: block; }
 
-/* line 50, sass/style.scss */
+/* line 52, sass/style.scss */
 main, #article-seul {
   border-bottom: 1px solid #333; }
 
 /* Les articles en page d'accueil */
-/* line 55, sass/style.scss */
+/* line 57, sass/style.scss */
 article {
   border-bottom: 1px dotted #333;
   padding-right: 8px; }
 
 /* Le pied de page */
-/* line 61, sass/style.scss */
+/* line 63, sass/style.scss */
 footer {
   background-color: #eee;
   border-top: 1px solid #333;
   clear: both; }
 
-/* line 67, sass/style.scss */
+/* line 69, sass/style.scss */
 footer h2 {
   margin: 0;
   padding: 10px;
   font-size: 1em; }
 
-/* line 73, sass/style.scss */
+/* line 75, sass/style.scss */
 .metadata {
   font-size: 0.8em;
   color: gray; }
 
 /* Règles pour grands écrans */
 @media only screen and (min-width: 735px) {
-  /* line 80, sass/style.scss */
+  /* line 82, sass/style.scss */
   main, #article-seul {
     display: block;
     border-bottom: none; }
 
-  /* line 85, sass/style.scss */
+  /* line 87, sass/style.scss */
   main, #article-seul {
     width: 100%; } }

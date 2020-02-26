@@ -39,9 +39,7 @@
              class="logoCegep entete__flex entete__flex--item">
     </div>
     <div id="menuOuvert" class="menuOuvert">
-        <svg height="5" width="320">
-            <line x1="0" y1="0" x2="100" y2="100" class="line"/>
-        </svg>
+
         <nav class="menu__mobile">
             <?php
             wp_nav_menu(array(
@@ -50,7 +48,9 @@
             ));
             ?>
         </nav>
-
+        <hr class="entete__ligneOrange"/>
+        <img src="<?php echo get_template_directory_uri(); ?>/images/logoCegep.png" alt="Logo du Cégep de Sainte-Foy"
+             class="logoCegep--mobile">
     </div>
     <nav class="menu__large">
         <?php

@@ -4,13 +4,16 @@ Template Name: Diplomes
 */
 ?>
 <?php get_header(); ?>
+    <img class="imageEntete" alt="image d'entête" src="<?php echo get_template_directory_uri(); ?>/images/entete-diplomes.jpg"/>
     <div class="conteneurGeneral">
+        <hr class="ligneOrange ligneOrange__gauche"/>
         <div class="diplomesDescription">
             <h1>Diplômé(e)s 2020</h1>
             <p>Qualifiés, déterminés, organisés, responsables, dynamiques... sont quelques-uns des qualificatifs qui
                 siéent
                 aux 24 diplômé(e)s de la TIM!</p>
         </div>
+        <hr class="ligneOrange ligneOrange__droite"/>
         <div class="diplomes">
             <?php
             $posts = get_posts(array(
@@ -18,7 +21,6 @@ Template Name: Diplomes
                 'post_type' => 'diplomes',
                 'post_status' => 'publish',
             ));
-
             if ($posts) : ?>
                 <ul class="diplomes__liste">
                     <?php foreach ($posts as $post): ?>

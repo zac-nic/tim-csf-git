@@ -93,16 +93,22 @@
   &__infos {
     display: flex;
     font-size: 16px;
+    @media (min-width: $desktop) {
+      font-size: 18px;
+    }
   }
 
   &__flex {
     display: flex;
     flex-direction: column;
     margin: 10px;
-    justify-content: space-between;
+    justify-content: center;
+    @media (min-width: $desktop) {
+      width: 40%;
+    }
 
     & p {
-      margin: 5px 0;
+      margin: 10px 0;
     }
   }
 
@@ -120,17 +126,25 @@
   &__nom {
     font-family: "Bebas Neue";
     font-size: 24px;
+    @media (min-width: $desktop) {
+      font-size: 32px;
+    }
   }
 
   &__image {
-    width: 50%;
-    height: 50%;
-    margin: 8px 0 0 8px;
+    margin: 10px 0 0 10px;
+    height: 100%;
+    @media(min-width: $desktop){
+      width:60%
+    }
   }
 
   &__temoignage {
     padding: 10px;
     font-size: 16px;
+    @media (min-width: $desktop) {
+      font-size: 18px;
+    }
   }
 
   &__entreprise {

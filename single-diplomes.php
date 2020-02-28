@@ -14,49 +14,60 @@ $site_web = get_field('site_web');
 
 ?>
 <div class="conteneurGeneral">
-    <div class="profil">
-        <a href="<?php echo get_page_link(411) ?>" class="retour">< Retour</a>
-        <h1 class="nomDiplome"><?php echo $arrPrenomNom; ?></h1>
-        <p class="profilTitre">Profil du diplômé(e) :</p>
-        <p class="profil"><?php echo $profil; ?></p>
+    <div class="diplome__profil">
+        <div class="diplome__profil__nomRetour">
+            <a href="<?php echo get_page_link(411) ?>" class="diplome__retour">< Retour</a>
+            <h1 class="diplome__nom"><?php echo $arrPrenomNom; ?></h1>
+        </div>
+        <div class="diplome__imageTexte">
+            <img src="<?php echo get_field('photo_initial', $post)['url'] ?>" alt=""
+                 class="diplome__image">
+            <div class="diplome__profil__conteneur">
+                <p class="diplome__profil__titre">Profil du diplômé(e) :</p>
+                <div class="diplome__profil__texte"><?php echo $profil; ?></div>
+            </div>
+        </div>
     </div>
-    <div class="liens">
+    <div class="diplome__liens">
         <?php if ($linkedin != ""): ?>
-            <a href="<?php echo $linkedin ?>" target="_blank" class="bouton">LinkedIn</a>
+            <a href="<?php echo $linkedin ?>" target="_blank" class="bouton diplome__lien">LinkedIn</a>
         <?php endif; ?>
         <?php if ($pseudo_twitter != ""): ?>
-            <a href="<?php echo $pseudo_twitter ?>" target="_blank" class="bouton">Twitter</a>
+            <a href="<?php echo $pseudo_twitter ?>" target="_blank" class="bouton diplome__lien">Twitter</a>
         <?php endif; ?>
         <?php if ($site_web != ""): ?>
-            <a href="<?php echo $site_web ?>" target="_blank" class="bouton">Site web</a>
+            <a href="<?php echo $site_web ?>" target="_blank" class="bouton diplome__lien">Site web</a>
         <?php endif; ?>
-        <a href="<?php echo "mailto:" . $courriel ?>" target="_blank" class="bouton">Écrivez-moi</a>
+        <a href="<?php echo "mailto:" . $courriel ?>" target="_blank" class="bouton diplome__lien">Écrivez-moi</a>
     </div>
-    <div class="interets">
-        <h2 class="interets__h2">Intérêts notés sur 10</h2>
-        <p class="interets__interet">
-            <span class="interets__note"><?php echo $interet_gestion_projet; ?></span>
-            <span class="interets__nom">Gestion</span>
+    <hr class="ligneOrange ligneOrange__droite"/>
+    <h2 class="accueil__h2">Intérêts notés sur 10</h2>
+    <div class="diplome__interets">
+
+        <p class="diplome__interets__interet">
+            <span class="diplome__interets__note"><?php echo $interet_gestion_projet; ?></span>
+            <span class="diplome__interets__nom">Gestion</span>
         </p>
-        <p class="interets__interet">
-            <span class="interets__note"><?php echo $interet_design_interface; ?></span>
-            <span class="interets__nom">Design</span>
+        <p class="diplome__interets__interet">
+            <span class="diplome__interets__note"><?php echo $interet_design_interface; ?></span>
+            <span class="diplome__interets__nom">Design</span>
         </p>
-        <p class="interets__interet">
-            <span class="interets__note"><?php echo $interet_traitement_medias; ?></span>
-            <span class="interets__nom">Traitement</span>
+        <p class="diplome__interets__interet">
+            <span class="diplome__interets__note"><?php echo $interet_traitement_medias; ?></span>
+            <span class="diplome__interets__nom">Traitement</span>
         </p>
-        <p class="interets__interet">
-            <span class="interets__note"><?php echo $interet_integration; ?></span>
-            <span class="interets__nom">Intégration</span>
+        <p class="diplome__interets__interet">
+            <span class="diplome__interets__note"><?php echo $interet_integration; ?></span>
+            <span class="diplome__interets__nom">Intégration</span>
         </p>
-        <p class="interets__interet">
-            <span class="interets__note"><?php echo $interet_programmation; ?></span>
-            <span class="interets__nom">Programmation</span>
+        <p class="diplome__interets__interet">
+            <span class="diplome__interets__note"><?php echo $interet_programmation; ?></span>
+            <span class="diplome__interets__nom">Programmation</span>
         </p>
     </div>
+    <hr class="ligneOrange ligneOrange__gauche"/>
+    <h2 class="accueil__h2">Projets</h2>
     <div class="projets">
-        <h2 class="projets__h2">Projets</h2>
         <ul class="projets__liste">
             <li class="projets__item">
                 <div>

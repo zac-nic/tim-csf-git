@@ -1061,16 +1061,24 @@ a.bouton:active {
 .temoignages__infos {
   display: flex;
   font-size: 16px; }
-/* line 98, sass/modules/_accueil.scss */
+@media (min-width: 601px) {
+  /* line 93, sass/modules/_accueil.scss */
+  .temoignages__infos {
+    font-size: 18px; } }
+/* line 101, sass/modules/_accueil.scss */
 .temoignages__flex {
   display: flex;
   flex-direction: column;
   margin: 10px;
-  justify-content: space-between; }
-/* line 104, sass/modules/_accueil.scss */
+  justify-content: center; }
+@media (min-width: 601px) {
+  /* line 101, sass/modules/_accueil.scss */
+  .temoignages__flex {
+    width: 40%; } }
+/* line 110, sass/modules/_accueil.scss */
 .temoignages__flex p {
-  margin: 5px 0; }
-/* line 109, sass/modules/_accueil.scss */
+  margin: 10px 0; }
+/* line 115, sass/modules/_accueil.scss */
 .temoignages__conteneur {
   background-color: #083C65;
   color: white;
@@ -1078,48 +1086,59 @@ a.bouton:active {
   display: flex;
   flex-direction: column; }
 @media (min-width: 601px) {
-  /* line 109, sass/modules/_accueil.scss */
+  /* line 115, sass/modules/_accueil.scss */
   .temoignages__conteneur {
     width: 48%; } }
-/* line 120, sass/modules/_accueil.scss */
+/* line 126, sass/modules/_accueil.scss */
 .temoignages__nom {
   font-family: "Bebas Neue";
   font-size: 24px; }
-/* line 125, sass/modules/_accueil.scss */
+@media (min-width: 601px) {
+  /* line 126, sass/modules/_accueil.scss */
+  .temoignages__nom {
+    font-size: 32px; } }
+/* line 134, sass/modules/_accueil.scss */
 .temoignages__image {
-  width: 50%;
-  height: 50%;
-  margin: 8px 0 0 8px; }
-/* line 131, sass/modules/_accueil.scss */
+  margin: 10px 0 0 10px;
+  height: 100%; }
+@media (min-width: 601px) {
+  /* line 134, sass/modules/_accueil.scss */
+  .temoignages__image {
+    width: 60%; } }
+/* line 142, sass/modules/_accueil.scss */
 .temoignages__temoignage {
   padding: 10px;
   font-size: 16px; }
-/* line 136, sass/modules/_accueil.scss */
+@media (min-width: 601px) {
+  /* line 142, sass/modules/_accueil.scss */
+  .temoignages__temoignage {
+    font-size: 18px; } }
+/* line 150, sass/modules/_accueil.scss */
 .temoignages__entreprise {
   color: white; }
 
-/* line 142, sass/modules/_accueil.scss */
+/* line 156, sass/modules/_accueil.scss */
 .etudiantUnJour, .profil, .grilleCours, .questions {
   text-align: center; }
 @media (min-width: 601px) {
-  /* line 142, sass/modules/_accueil.scss */
+  /* line 156, sass/modules/_accueil.scss */
   .etudiantUnJour, .profil, .grilleCours, .questions {
     width: 50%;
     margin: 0 auto; } }
 
-/* line 150, sass/modules/_accueil.scss */
+/* line 164, sass/modules/_accueil.scss */
 .inscrire {
   color: white;
   background-color: #083C65;
   padding: 10px; }
 @media (min-width: 601px) {
-  /* line 150, sass/modules/_accueil.scss */
+  /* line 164, sass/modules/_accueil.scss */
   .inscrire {
     width: 60%;
     margin: 0 auto;
     padding: 10px 30px 30px 30px; } }
 
-/* line 161, sass/modules/_accueil.scss */
+/* line 175, sass/modules/_accueil.scss */
 .convaincu {
   background-color: #A9DAFF;
   text-align: center;
@@ -1136,7 +1155,7 @@ a.bouton:active {
 @media (min-width: 601px) {
   /* line 2, sass/modules/_stages.scss */
   .stages__description {
-    width: 50%; } }
+    width: 60%; } }
 /* line 12, sass/modules/_stages.scss */
 .stages__titre {
   text-align: center;
@@ -1326,52 +1345,211 @@ a.bouton:active {
   border-radius: 5px;
   padding: 5px; }
 
+/** Diplômés **/
+/** content-diplomes **/
+/* line 3, sass/modules/_diplomes.scss */
+.diplomes__description {
+  width: 100%;
+  margin: 10px auto; }
+@media (min-width: 601px) {
+  /* line 3, sass/modules/_diplomes.scss */
+  .diplomes__description {
+    width: 60%;
+    margin: 20px auto; } }
+/* line 12, sass/modules/_diplomes.scss */
+.diplomes__liste {
+  list-style-type: none;
+  padding: 0; }
+@media (min-width: 601px) {
+  /* line 12, sass/modules/_diplomes.scss */
+  .diplomes__liste {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; } }
+/* line 22, sass/modules/_diplomes.scss */
+.diplomes__item {
+  display: flex;
+  flex-direction: column;
+  margin: 10px; }
+@media (min-width: 601px) {
+  /* line 22, sass/modules/_diplomes.scss */
+  .diplomes__item {
+    flex-direction: row;
+    width: 40%; } }
+/* line 32, sass/modules/_diplomes.scss */
+.diplomes__nom {
+  text-decoration: none;
+  color: white;
+  background-color: #083C65;
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-size: 22px; }
+/* line 40, sass/modules/_diplomes.scss */
+.diplomes__nom:hover {
+  color: black;
+  background-color: #A9DAFF; }
+/* line 45, sass/modules/_diplomes.scss */
+.diplomes__nomPrenom {
+  padding: 10px; }
+/* line 50, sass/modules/_diplomes.scss */
+.diplomes__image {
+  width: 100%;
+  height: 100%;
+  margin-bottom: -10px; }
+/* line 54, sass/modules/_diplomes.scss */
+.diplomes__image__conteneur {
+  position: relative; }
+/* line 59, sass/modules/_diplomes.scss */
+.diplomes__image--initial:hover {
+  opacity: 0; }
+/* line 63, sass/modules/_diplomes.scss */
+.diplomes__image--survol {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%; }
+/* line 70, sass/modules/_diplomes.scss */
+.diplomes__image--survol:hover {
+  opacity: 1; }
+
+/** single-diplomes **/
+/* line 79, sass/modules/_diplomes.scss */
+.diplome__profil {
+  background-color: #A9DAFF;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0; }
+/* line 86, sass/modules/_diplomes.scss */
+.diplome__profil__nomRetour {
+  background-color: #083C65;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0 auto;
+  width: 100%; }
+@media (min-width: 601px) {
+  /* line 86, sass/modules/_diplomes.scss */
+  .diplome__profil__nomRetour {
+    flex-direction: row; } }
+/* line 100, sass/modules/_diplomes.scss */
+.diplome__profil__titre {
+  text-align: center;
+  margin-bottom: 0; }
+/* line 105, sass/modules/_diplomes.scss */
+.diplome__profil__texte {
+  margin: 0 10px 20px 10px; }
+/* line 110, sass/modules/_diplomes.scss */
+.diplome__profil__conteneur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+/* line 117, sass/modules/_diplomes.scss */
+.diplome__nom {
+  text-align: center; }
+/* line 121, sass/modules/_diplomes.scss */
+.diplome__retour {
+  color: white;
+  margin: 10px;
+  display: block;
+  text-decoration: none; }
+/* line 127, sass/modules/_diplomes.scss */
+.diplome__retour:hover {
+  color: #FF9200; }
+/* line 132, sass/modules/_diplomes.scss */
+.diplome__image {
+  width: 100%;
+  height: 100%; }
+@media (min-width: 601px) {
+  /* line 132, sass/modules/_diplomes.scss */
+  .diplome__image {
+    width: 30%; } }
+@media (min-width: 601px) {
+  /* line 140, sass/modules/_diplomes.scss */
+  .diplome__imageTexte {
+    display: flex;
+    margin: auto 0; } }
+/* line 148, sass/modules/_diplomes.scss */
+.diplome__liens {
+  text-align: center; }
+/* line 152, sass/modules/_diplomes.scss */
+.diplome__lien {
+  margin-right: 10px; }
+/* line 156, sass/modules/_diplomes.scss */
+.diplome__interets {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-flow: wrap;
+  justify-content: center; }
+@media (min-width: 601px) {
+  /* line 156, sass/modules/_diplomes.scss */
+  .diplome__interets {
+    flex-direction: row;
+    width: 60%;
+    margin: 0 auto; } }
+/* line 169, sass/modules/_diplomes.scss */
+.diplome__interets__interet {
+  display: flex;
+  flex-direction: column;
+  width: 30%; }
+@media (min-width: 601px) {
+  /* line 169, sass/modules/_diplomes.scss */
+  .diplome__interets__interet {
+    width: 20%; } }
+/* line 178, sass/modules/_diplomes.scss */
+.diplome__interets__note {
+  font-size: 48px; }
+
 /* Styles généraux */
-/* line 42, sass/style.scss */
+/* line 44, sass/style.scss */
 #content {
   max-width: 1000px;
   margin: 0 auto; }
 
 /* Structure générale */
-/* line 48, sass/style.scss */
+/* line 50, sass/style.scss */
 label.screen-reader-text {
   display: block; }
 
-/* line 52, sass/style.scss */
+/* line 54, sass/style.scss */
 main, #article-seul {
   border-bottom: 1px solid #333; }
 
 /* Les articles en page d'accueil */
-/* line 57, sass/style.scss */
+/* line 59, sass/style.scss */
 article {
   border-bottom: 1px dotted #333;
   padding-right: 8px; }
 
 /* Le pied de page */
-/* line 63, sass/style.scss */
+/* line 65, sass/style.scss */
 footer {
   background-color: #eee;
   border-top: 1px solid #333;
   clear: both; }
 
-/* line 69, sass/style.scss */
+/* line 71, sass/style.scss */
 footer h2 {
   margin: 0;
   padding: 10px;
   font-size: 1em; }
 
-/* line 75, sass/style.scss */
+/* line 77, sass/style.scss */
 .metadata {
   font-size: 0.8em;
   color: gray; }
 
 /* Règles pour grands écrans */
 @media only screen and (min-width: 735px) {
-  /* line 82, sass/style.scss */
+  /* line 84, sass/style.scss */
   main, #article-seul {
     display: block;
     border-bottom: none; }
 
-  /* line 87, sass/style.scss */
+  /* line 89, sass/style.scss */
   main, #article-seul {
     width: 100%; } }

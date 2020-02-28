@@ -88,7 +88,7 @@ Template Name: Accueil
             <?php foreach ($posts as $post): ?>
                 <div class="temoignages__conteneur">
                     <div class="temoignages__infos">
-                        <img src="https://via.placeholder.com/235" alt="Portrait de l'ancien étudiant"
+                        <img src="https://via.placeholder.com/200" alt="Portrait de l'ancien étudiant"
                              class="temoignages__image">
                         <div class="temoignages__flex">
                             <p class="temoignages__annee">

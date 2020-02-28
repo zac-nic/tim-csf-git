@@ -1,0 +1,183 @@
+/** content-diplomes **/
+.diplomes {
+  &__description {
+    width: 100%;
+    margin: 10px auto;
+    @media(min-width: $desktop) {
+      width: 60%;
+      margin: 20px auto;
+    }
+  }
+
+  &__liste {
+    list-style-type: none;
+    padding: 0;
+    @media(min-width: $desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    @media (min-width: $desktop) {
+      flex-direction: row;
+      width: 40%;
+    }
+  }
+
+  &__nom {
+    text-decoration: none;
+    color: white;
+    background-color: $bleuFonce;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 22px;
+
+    &:hover {
+      color: black;
+      background-color: $bleuPale;
+    }
+
+    &Prenom {
+      padding: 10px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -10px;
+    &__conteneur {
+      position: relative;
+
+    }
+
+    &--initial:hover {
+      opacity: 0;
+    }
+
+    &--survol {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/** single-diplomes **/
+.diplome {
+  &__profil {
+    background-color: $bleuPale;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+
+    &__nomRetour {
+      background-color: $bleuFonce;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px 0;
+      margin: 0 auto;
+      width: 100%;
+      @media (min-width: $desktop) {
+        flex-direction: row;
+      }
+    }
+
+    &__titre {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    &__texte {
+      margin: 0 10px 20px 10px;
+    }
+
+
+    &__conteneur {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__nom {
+    text-align: center;
+  }
+
+  &__retour {
+    color: white;
+    margin: 10px;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    @media(min-width: $desktop) {
+      width: 30%;
+    }
+  }
+
+  &__imageTexte {
+    @media(min-width: $desktop) {
+      display: flex;
+      margin: auto 0;
+    }
+
+  }
+
+  &__liens {
+    text-align: center;
+  }
+
+  &__lien {
+    margin-right: 10px;
+  }
+
+  &__interets {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-flow: wrap;
+    justify-content: center;
+    @media(min-width: $desktop) {
+      flex-direction: row;
+      width: 60%;
+      margin: 0 auto;
+
+    }
+
+    &__interet {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      @media(min-width: $desktop) {
+        width: 20%;
+      }
+    }
+
+    &__note {
+      font-size: 48px;
+    }
+  }
+}
+

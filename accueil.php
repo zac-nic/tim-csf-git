@@ -88,7 +88,7 @@ Template Name: Accueil
             <?php foreach ($posts as $post): ?>
                 <div class="temoignages__conteneur">
                     <div class="temoignages__infos">
-                        <img src="https://via.placeholder.com/200" alt="Portrait de l'ancien étudiant"
+                        <img src="<?php echo get_field('photo', $post)['url'] ?>" alt="Portrait de l'ancien étudiant"
                              class="temoignages__image">
                         <div class="temoignages__flex">
                             <p class="temoignages__annee">
@@ -143,6 +143,13 @@ Template Name: Accueil
         <p class="questions__texte">Contacte Sylvain Lamoureux pour en savoir plus.</p>
         <a href="<?php echo get_page_link(192); ?>" class="bouton">Nous joindre</a>
     </div>
+    <hr class="ligneOrange ligneOrange__droite"/>
+    <h2 class="accueil__h2">Facebook</h2>
+    <div class="facebook">
+        <?php echo do_shortcode("[custom-facebook-feed]"); ?>
+    </div>
+    <hr class="ligneOrange ligneOrange__gauche"/>
+    <h2 class="accueil__h2">Twitter</h2>
     <hr class="ligneOrange ligneOrange__droite"/>
     <div class="inscrire">
         <h2 class="accueil__h2">S'inscrire au programme</h2>

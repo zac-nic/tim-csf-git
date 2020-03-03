@@ -11,7 +11,24 @@ $courriel = get_field('courriel');
 $pseudo_twitter = get_field('pseudo_twitter');
 $linkedin = get_field('linkedin');
 $site_web = get_field('site_web');
+$photo = get_field('photo_initial')['url'];
 
+// Affichage des projets selon le diplômé
+$posts = get_posts(array(
+    'posts_per_page' => -1,
+    'post_type' => 'projets',
+    'post_status' => 'publish',
+    'meta_key' => 'id_diplome',
+    'meta_value' => get_field('id_diplome'),
+    'meta_compare' => "=",
+));
+
+$arrProjets = array();
+if ($posts):
+    foreach ($posts as $post):
+        array_push($arrProjets, $post);
+    endforeach;
+endif;
 ?>
 <div class="conteneurGeneral">
     <div class="diplome__profil">
@@ -20,7 +37,7 @@ $site_web = get_field('site_web');
             <h1 class="diplome__nom"><?php echo $arrPrenomNom; ?></h1>
         </div>
         <div class="diplome__imageTexte">
-            <img src="<?php echo get_field('photo_initial', $post)['url'] ?>" alt=""
+            <img src="<?php echo $photo ?>" alt=""
                  class="diplome__image">
             <div class="diplome__profil__conteneur">
                 <p class="diplome__profil__titre">Profil du diplômé(e) :</p>
@@ -67,15 +84,28 @@ $site_web = get_field('site_web');
     </div>
     <hr class="ligneOrange ligneOrange__gauche"/>
     <h2 class="accueil__h2">Projets</h2>
+
     <div class="projets">
         <ul class="projets__liste">
-            <li class="projets__item">
-                <div>
-                    <h3 class="projets__nom">
-                        <!--  À COMPLÉTER  -->
-                    </h3>
-                </div>
-            </li>
+            <?php
+            for ($cpt = 0;
+                 $cpt < 2;
+                 $cpt++) {
+                ?>
+                <?php
+                if (get_field("id_diplome") == get_field("id_diplome", $arrProjets[$cpt]->ID)) { ?>
+                    <li class="projets__item">
+                        <h3 class="projets__nom">
+                            <?php echo $arrProjets[$cpt]->post_title; ?>
+                        </h3>
+                        <img class="projets__image"
+                             src="<?php echo get_site_url() ?>/wp-content/uploads/2020/02/prj<?php echo $arrProjets[$cpt]->id_projet ?>_01.png"/>
+                        <div class="projets__description"><?php echo $arrProjets[$cpt]->description ?></div>
+                        <p class="projets__technologies">Technologies :
+                            <b><?php echo $arrProjets[$cpt]->technologies ?></b></p>
+                    </li>
+                <?php }
+            } ?>
         </ul>
     </div>
 </div>

@@ -91,9 +91,10 @@
   }
 
   &__infos {
-    display: flex;
+
     font-size: 16px;
     @media (min-width: $desktop) {
+      display: flex;
       font-size: 18px;
     }
   }
@@ -132,10 +133,10 @@
   }
 
   &__image {
-    margin: 10px 0 0 10px;
-    height: 100%;
-    @media(min-width: $desktop){
-      width:60%
+    width: 100%;
+    @media(min-width: $desktop) {
+      margin: 10px 0 0 10px;
+      width: 60%
     }
   }
 
@@ -158,6 +159,18 @@
   @media(min-width: $desktop) {
     width: 50%;
     margin: 0 auto;
+  }
+}
+
+.facebook {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  overflow: scroll;
+  height: 400px;
+  @media(min-width: $desktop){
+    width: 60%;
   }
 }
 

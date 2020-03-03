@@ -106,24 +106,63 @@ padding-top: 20px;
     text-align: center;
   }
 
-  & input {
-    margin: 5px 0 15px 0;
+  &__input {
+    margin: 5px 0 2px 0;
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
   }
 
   & select {
-    margin: 5px 0 15px 0;
+    margin: 5px 0 2px 0;
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
   }
 
   & textarea {
-    margin: 5px 0 15px 0;
+    margin: 5px 0 2px 0;
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
+    resize: none;
   }
+  &__btnEnvoyer {
+    background-color: $bleuMoyen;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 40px;
+    text-decoration: none;
+    box-shadow: $bleuPale 4px 4px;
+    text-transform: uppercase;
+    display: inline-block;
+    &:hover {
+      background-color: $bleuFonce;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: $orange;
+      box-shadow: $bleuFonce 4px 4px;
+    }
+  }
+}
+
+.messageErreur {
+  color: darkred;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+
+}
+
+.messageGeneral {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: $bleuFonce;
+}
+.g-recaptcha {
+  display: flex;
+  justify-content: center;
 }

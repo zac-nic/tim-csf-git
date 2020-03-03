@@ -1059,26 +1059,26 @@ a.bouton:active {
     justify-content: space-evenly; } }
 /* line 93, sass/modules/_accueil.scss */
 .temoignages__infos {
-  display: flex;
   font-size: 16px; }
 @media (min-width: 601px) {
   /* line 93, sass/modules/_accueil.scss */
   .temoignages__infos {
+    display: flex;
     font-size: 18px; } }
-/* line 101, sass/modules/_accueil.scss */
+/* line 102, sass/modules/_accueil.scss */
 .temoignages__flex {
   display: flex;
   flex-direction: column;
   margin: 10px;
   justify-content: center; }
 @media (min-width: 601px) {
-  /* line 101, sass/modules/_accueil.scss */
+  /* line 102, sass/modules/_accueil.scss */
   .temoignages__flex {
     width: 40%; } }
-/* line 110, sass/modules/_accueil.scss */
+/* line 111, sass/modules/_accueil.scss */
 .temoignages__flex p {
   margin: 10px 0; }
-/* line 115, sass/modules/_accueil.scss */
+/* line 116, sass/modules/_accueil.scss */
 .temoignages__conteneur {
   background-color: #083C65;
   color: white;
@@ -1086,59 +1086,72 @@ a.bouton:active {
   display: flex;
   flex-direction: column; }
 @media (min-width: 601px) {
-  /* line 115, sass/modules/_accueil.scss */
+  /* line 116, sass/modules/_accueil.scss */
   .temoignages__conteneur {
     width: 48%; } }
-/* line 126, sass/modules/_accueil.scss */
+/* line 127, sass/modules/_accueil.scss */
 .temoignages__nom {
   font-family: "Bebas Neue";
   font-size: 24px; }
 @media (min-width: 601px) {
-  /* line 126, sass/modules/_accueil.scss */
+  /* line 127, sass/modules/_accueil.scss */
   .temoignages__nom {
     font-size: 32px; } }
-/* line 134, sass/modules/_accueil.scss */
+/* line 135, sass/modules/_accueil.scss */
 .temoignages__image {
-  margin: 10px 0 0 10px;
-  height: 100%; }
+  width: 100%; }
 @media (min-width: 601px) {
-  /* line 134, sass/modules/_accueil.scss */
+  /* line 135, sass/modules/_accueil.scss */
   .temoignages__image {
+    margin: 10px 0 0 10px;
     width: 60%; } }
-/* line 142, sass/modules/_accueil.scss */
+/* line 143, sass/modules/_accueil.scss */
 .temoignages__temoignage {
   padding: 10px;
   font-size: 16px; }
 @media (min-width: 601px) {
-  /* line 142, sass/modules/_accueil.scss */
+  /* line 143, sass/modules/_accueil.scss */
   .temoignages__temoignage {
     font-size: 18px; } }
-/* line 150, sass/modules/_accueil.scss */
+/* line 151, sass/modules/_accueil.scss */
 .temoignages__entreprise {
   color: white; }
 
-/* line 156, sass/modules/_accueil.scss */
+/* line 157, sass/modules/_accueil.scss */
 .etudiantUnJour, .profil, .grilleCours, .questions {
   text-align: center; }
 @media (min-width: 601px) {
-  /* line 156, sass/modules/_accueil.scss */
+  /* line 157, sass/modules/_accueil.scss */
   .etudiantUnJour, .profil, .grilleCours, .questions {
     width: 50%;
     margin: 0 auto; } }
 
-/* line 164, sass/modules/_accueil.scss */
+/* line 165, sass/modules/_accueil.scss */
+.facebook {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  overflow: scroll;
+  height: 400px; }
+@media (min-width: 601px) {
+  /* line 165, sass/modules/_accueil.scss */
+  .facebook {
+    width: 60%; } }
+
+/* line 177, sass/modules/_accueil.scss */
 .inscrire {
   color: white;
   background-color: #083C65;
   padding: 10px; }
 @media (min-width: 601px) {
-  /* line 164, sass/modules/_accueil.scss */
+  /* line 177, sass/modules/_accueil.scss */
   .inscrire {
     width: 60%;
     margin: 0 auto;
     padding: 10px 30px 30px 30px; } }
 
-/* line 175, sass/modules/_accueil.scss */
+/* line 188, sass/modules/_accueil.scss */
 .convaincu {
   background-color: #A9DAFF;
   text-align: center;
@@ -1327,23 +1340,61 @@ a.bouton:active {
 .formulaire__titre {
   text-align: center; }
 /* line 109, sass/modules/_nousJoindre.scss */
-.formulaire input {
-  margin: 5px 0 15px 0;
+.formulaire__input {
+  margin: 5px 0 2px 0;
   border: 1px solid black;
   border-radius: 5px;
   padding: 5px; }
 /* line 116, sass/modules/_nousJoindre.scss */
 .formulaire select {
-  margin: 5px 0 15px 0;
+  margin: 5px 0 2px 0;
   border: 1px solid black;
   border-radius: 5px;
   padding: 5px; }
 /* line 123, sass/modules/_nousJoindre.scss */
 .formulaire textarea {
-  margin: 5px 0 15px 0;
+  margin: 5px 0 2px 0;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 5px; }
+  padding: 5px;
+  resize: none; }
+/* line 130, sass/modules/_nousJoindre.scss */
+.formulaire__btnEnvoyer {
+  background-color: #0B61A4;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 40px;
+  text-decoration: none;
+  box-shadow: #A9DAFF 4px 4px;
+  text-transform: uppercase;
+  display: inline-block; }
+/* line 139, sass/modules/_nousJoindre.scss */
+.formulaire__btnEnvoyer:hover {
+  background-color: #083C65;
+  cursor: pointer; }
+/* line 144, sass/modules/_nousJoindre.scss */
+.formulaire__btnEnvoyer:active {
+  background-color: #FF9200;
+  box-shadow: #083C65 4px 4px; }
+
+/* line 151, sass/modules/_nousJoindre.scss */
+.messageErreur {
+  color: darkred;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-size: 16px; }
+
+/* line 159, sass/modules/_nousJoindre.scss */
+.messageGeneral {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #083C65; }
+
+/* line 165, sass/modules/_nousJoindre.scss */
+.g-recaptcha {
+  display: flex;
+  justify-content: center; }
 
 /** Diplômés **/
 /** content-diplomes **/
@@ -1396,32 +1447,32 @@ a.bouton:active {
   width: 100%;
   height: 100%;
   margin-bottom: -10px; }
-/* line 54, sass/modules/_diplomes.scss */
+/* line 55, sass/modules/_diplomes.scss */
 .diplomes__image__conteneur {
   position: relative; }
-/* line 59, sass/modules/_diplomes.scss */
+/* line 60, sass/modules/_diplomes.scss */
 .diplomes__image--initial:hover {
   opacity: 0; }
-/* line 63, sass/modules/_diplomes.scss */
+/* line 64, sass/modules/_diplomes.scss */
 .diplomes__image--survol {
   opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%; }
-/* line 70, sass/modules/_diplomes.scss */
+/* line 71, sass/modules/_diplomes.scss */
 .diplomes__image--survol:hover {
   opacity: 1; }
 
 /** single-diplomes **/
-/* line 79, sass/modules/_diplomes.scss */
+/* line 80, sass/modules/_diplomes.scss */
 .diplome__profil {
   background-color: #A9DAFF;
   color: black;
   display: flex;
   flex-direction: column;
   margin: 20px 0; }
-/* line 86, sass/modules/_diplomes.scss */
+/* line 87, sass/modules/_diplomes.scss */
 .diplome__profil__nomRetour {
   background-color: #083C65;
   color: white;
@@ -1432,53 +1483,53 @@ a.bouton:active {
   margin: 0 auto;
   width: 100%; }
 @media (min-width: 601px) {
-  /* line 86, sass/modules/_diplomes.scss */
+  /* line 87, sass/modules/_diplomes.scss */
   .diplome__profil__nomRetour {
     flex-direction: row; } }
-/* line 100, sass/modules/_diplomes.scss */
+/* line 101, sass/modules/_diplomes.scss */
 .diplome__profil__titre {
   text-align: center;
   margin-bottom: 0; }
-/* line 105, sass/modules/_diplomes.scss */
+/* line 106, sass/modules/_diplomes.scss */
 .diplome__profil__texte {
   margin: 0 10px 20px 10px; }
-/* line 110, sass/modules/_diplomes.scss */
+/* line 111, sass/modules/_diplomes.scss */
 .diplome__profil__conteneur {
   display: flex;
   flex-direction: column;
   justify-content: center; }
-/* line 117, sass/modules/_diplomes.scss */
+/* line 118, sass/modules/_diplomes.scss */
 .diplome__nom {
   text-align: center; }
-/* line 121, sass/modules/_diplomes.scss */
+/* line 122, sass/modules/_diplomes.scss */
 .diplome__retour {
   color: white;
   margin: 10px;
   display: block;
   text-decoration: none; }
-/* line 127, sass/modules/_diplomes.scss */
+/* line 128, sass/modules/_diplomes.scss */
 .diplome__retour:hover {
   color: #FF9200; }
-/* line 132, sass/modules/_diplomes.scss */
+/* line 133, sass/modules/_diplomes.scss */
 .diplome__image {
   width: 100%;
   height: 100%; }
 @media (min-width: 601px) {
-  /* line 132, sass/modules/_diplomes.scss */
+  /* line 133, sass/modules/_diplomes.scss */
   .diplome__image {
     width: 30%; } }
 @media (min-width: 601px) {
-  /* line 140, sass/modules/_diplomes.scss */
+  /* line 141, sass/modules/_diplomes.scss */
   .diplome__imageTexte {
     display: flex;
     margin: auto 0; } }
-/* line 148, sass/modules/_diplomes.scss */
+/* line 149, sass/modules/_diplomes.scss */
 .diplome__liens {
   text-align: center; }
-/* line 152, sass/modules/_diplomes.scss */
+/* line 153, sass/modules/_diplomes.scss */
 .diplome__lien {
   margin-right: 10px; }
-/* line 156, sass/modules/_diplomes.scss */
+/* line 157, sass/modules/_diplomes.scss */
 .diplome__interets {
   display: flex;
   flex-direction: column;
@@ -1486,70 +1537,100 @@ a.bouton:active {
   flex-flow: wrap;
   justify-content: center; }
 @media (min-width: 601px) {
-  /* line 156, sass/modules/_diplomes.scss */
+  /* line 157, sass/modules/_diplomes.scss */
   .diplome__interets {
     flex-direction: row;
     width: 60%;
     margin: 0 auto; } }
-/* line 169, sass/modules/_diplomes.scss */
+/* line 170, sass/modules/_diplomes.scss */
 .diplome__interets__interet {
   display: flex;
   flex-direction: column;
   width: 30%; }
 @media (min-width: 601px) {
-  /* line 169, sass/modules/_diplomes.scss */
+  /* line 170, sass/modules/_diplomes.scss */
   .diplome__interets__interet {
     width: 20%; } }
-/* line 178, sass/modules/_diplomes.scss */
+/* line 179, sass/modules/_diplomes.scss */
 .diplome__interets__note {
   font-size: 48px; }
 
-/* Styles généraux */
-/* line 44, sass/style.scss */
+/* line 186, sass/modules/_diplomes.scss */
+.projets__liste {
+  list-style-type: none;
+  padding: 0; }
+/* line 191, sass/modules/_diplomes.scss */
+.projets__nom {
+  text-align: center;
+  background-color: #083C65;
+  color: white;
+  padding: 10px;
+  margin: 0; }
+@media (min-width: 601px) {
+  /* line 191, sass/modules/_diplomes.scss */
+  .projets__nom {
+    font-size: 28px; } }
+/* line 202, sass/modules/_diplomes.scss */
+.projets__image {
+  width: 100%; }
+/* line 206, sass/modules/_diplomes.scss */
+.projets__technologies {
+  margin-bottom: 40px;
+  text-align: center; }
+/* line 211, sass/modules/_diplomes.scss */
+.projets__description {
+  margin-top: 20px; }
+@media (min-width: 601px) {
+  /* line 211, sass/modules/_diplomes.scss */
+  .projets__description {
+    width: 80%;
+    margin: 20px auto 0 auto; } }
+
+/* line 43, sass/style.scss */
 #content {
   max-width: 1000px;
   margin: 0 auto; }
 
 /* Structure générale */
-/* line 50, sass/style.scss */
+/* line 49, sass/style.scss */
 label.screen-reader-text {
   display: block; }
 
-/* line 54, sass/style.scss */
+/* line 53, sass/style.scss */
 main, #article-seul {
   border-bottom: 1px solid #333; }
 
 /* Les articles en page d'accueil */
-/* line 59, sass/style.scss */
+/* line 58, sass/style.scss */
 article {
   border-bottom: 1px dotted #333;
   padding-right: 8px; }
 
 /* Le pied de page */
-/* line 65, sass/style.scss */
+/* line 64, sass/style.scss */
 footer {
   background-color: #eee;
   border-top: 1px solid #333;
   clear: both; }
 
-/* line 71, sass/style.scss */
+/* line 70, sass/style.scss */
 footer h2 {
   margin: 0;
   padding: 10px;
   font-size: 1em; }
 
-/* line 77, sass/style.scss */
+/* line 76, sass/style.scss */
 .metadata {
   font-size: 0.8em;
   color: gray; }
 
 /* Règles pour grands écrans */
 @media only screen and (min-width: 735px) {
-  /* line 84, sass/style.scss */
+  /* line 83, sass/style.scss */
   main, #article-seul {
     display: block;
     border-bottom: none; }
 
-  /* line 89, sass/style.scss */
+  /* line 88, sass/style.scss */
   main, #article-seul {
     width: 100%; } }

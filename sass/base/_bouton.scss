@@ -3,15 +3,22 @@
 */
 
 .bouton {
-  background-color: $bleuMoyen;
+  background-color: $bleuFonce;
   border-radius: 5px;
+  border: none;
   color: white;
-  padding: 8px 40px;
+  padding: 8px 10px;
   text-decoration: none;
   box-shadow: $bleuPale 4px 4px;
   text-transform: uppercase;
   display: inline-block;
-  margin-bottom: 10px;
+  font-size: 16px;
+  width: 60%;
+  margin: 0 auto 15px auto;
+  @media(min-width: $desktop) {
+    margin: 5px;
+    width: 100%;
+  }
 
   &--hover {
     background-color: $bleuFonce;
@@ -21,13 +28,13 @@
     background-color: $orange;
     box-shadow: $bleuFonce 4px 4px;
   }
+
 }
 
 a.bouton {
   background-color: $bleuMoyen;
   border-radius: 5px;
   color: white;
-  padding: 8px 40px;
   text-decoration: none;
   box-shadow: $bleuPale 4px 4px;
   text-transform: uppercase;

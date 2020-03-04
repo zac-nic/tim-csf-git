@@ -25,7 +25,7 @@ Template Name: Accueil
         <h2 class="accueil__h2">Grande diversité des compétences</h2>
         <div class="competences__rangee1">
             <div class="competences__conteneur">
-                <div class="competences__texte1">
+                <div class="competences__texte1 programmation">
                     <p class="competences__nom">30% PROGRAMMATION</p>
                     <p class="competences__description">Rendre fonctionnel un produit interactif, web et application
                         (backend)</p>
@@ -35,7 +35,7 @@ Template Name: Accueil
                      src="<?php echo get_template_directory_uri(); ?>/images/programmation.jpg"/>
             </div>
             <div class="competences__conteneur">
-                <div class="competences__texte1">
+                <div class="competences__texte1 integration">
                     <p class="competences__nom">25% INTÉGRATION</p>
                     <p class="competences__description">Assembler les produits avec du code et rendre l’interface
                         interactive (frontend)</p>
@@ -48,7 +48,7 @@ Template Name: Accueil
         </div>
         <div class="competences__rangee2">
             <div class="competences__conteneur">
-                <div class="competences__texte2">
+                <div class="competences__texte2 conception">
                     <p class="competences__nom">20% CONCEPTION</p>
                     <p class="competences__description">Rendre les interfaces utilisable et attrayante</p>
                     <p class="competences__technologies">Design d’interfaces Web et tactiles, formulaires, scénarisation
@@ -56,7 +56,7 @@ Template Name: Accueil
                 </div>
             </div>
             <div class="competences__conteneur">
-                <div class="competences__texte2">
+                <div class="competences__texte2 medias">
                     <p class="competences__nom">15% MÉDIAS</p>
                     <p class="competences__description">Créer des médias</p>
                     <p class="competences__technologies">Images, photomontages, vidéos, animations, sons, motion design,
@@ -64,7 +64,7 @@ Template Name: Accueil
                 </div>
             </div>
             <div class="competences__conteneur">
-                <div class="competences__texte2">
+                <div class="competences__texte2 autre">
                     <p class="competences__nom">10% AUTRE</p>
                     <p class="competences__description">Gérer des projets, réaliser des stages en milieu professionnels,
                         gestion agile, outils de gestion de
@@ -116,14 +116,14 @@ Template Name: Accueil
             multimédia!
         </p>
         <p class="etudiantUnJour__texte">Contacte Benoît Frigon pour en savoir plus.</p>
-        <a href="<?php echo get_page_link(192); ?>" class="bouton">Nous joindre</a>
+        <a href="<?php echo get_page_link(192); ?>" class="bouton btnLargeur">Nous joindre</a>
     </div>
     <hr class="ligneOrange ligneOrange__gauche"/>
     <div class="profil">
         <h2 class="accueil__h2">As-tu le profil?</h2>
         <p class="profil__texte">Pour savoir si vous avez le profil, réalisez une autoévaluation.</p>
         <a href="https://www.cegep-ste-foy.qc.ca/programmes/programmes-techniques/techniques-dintegration-multimedia-web-et-apps/autoevaluation/"
-           target="_blank" class="bouton">Faire le quiz<span class="bouton__icone"></span></a>
+           target="_blank" class="bouton btnLargeur">Faire le quiz<span class="bouton__icone"></span></a>
     </div>
     <hr class="ligneOrange ligneOrange__droite"/>
     <div class="grilleCours">
@@ -131,7 +131,7 @@ Template Name: Accueil
         <p class="grilleCours__texte">Afin d’obtenir plus de détails sur les différents cours, veuillez consulter la
             grille
             de cours officielle sur le site du Cégep de Sainte-Foy.</p>
-        <a href="#" class="bouton">Voir la grille de cours<span class="bouton__icone"></span></a>
+        <a href="#" class="bouton btnLargeur">Voir la grille de cours<span class="bouton__icone"></span></a>
     </div>
     <hr class="ligneOrange ligneOrange__gauche"/>
     <div class="questions">
@@ -141,7 +141,7 @@ Template Name: Accueil
             multimédia!
         </p>
         <p class="questions__texte">Contacte Sylvain Lamoureux pour en savoir plus.</p>
-        <a href="<?php echo get_page_link(192); ?>" class="bouton">Nous joindre</a>
+        <a href="<?php echo get_page_link(192); ?>" class="bouton btnLargeur">Nous joindre</a>
     </div>
     <hr class="ligneOrange ligneOrange__droite"/>
     <h2 class="accueil__h2">Facebook</h2>
@@ -149,8 +149,6 @@ Template Name: Accueil
         <?php echo do_shortcode("[custom-facebook-feed]"); ?>
     </div>
     <hr class="ligneOrange ligneOrange__gauche"/>
-    <h2 class="accueil__h2">Twitter</h2>
-    <hr class="ligneOrange ligneOrange__droite"/>
     <div class="inscrire">
         <h2 class="accueil__h2">S'inscrire au programme</h2>
         <p class="inscrire__texte">Les demandes d'admission au programme TIM sont reçues avant le 1er mars de chaque
@@ -165,7 +163,7 @@ Template Name: Accueil
 </div>
 <div class="convaincu">
     <p class="convaincu__texte">Vous êtes convaincu(e)?</p>
-    <a href="https://www.cegep-ste-foy.qc.ca/index.php?id=5302" target="_blank" class="bouton">M'inscrire<span
+    <a href="https://www.cegep-ste-foy.qc.ca/index.php?id=5302" target="_blank" class="bouton btnLargeur">M'inscrire<span
                 class="bouton__icone"></span></a>
 </div>
 <?php get_footer() ?>

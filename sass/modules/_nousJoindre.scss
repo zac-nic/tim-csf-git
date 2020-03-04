@@ -16,7 +16,7 @@
     margin: 0 auto;
     @media(min-width: $desktop) {
       width: 660px;
-padding-top: 20px;
+      padding-top: 20px;
       padding-bottom: 20px;
     }
   }
@@ -127,15 +127,18 @@ padding-top: 20px;
     padding: 5px;
     resize: none;
   }
+
   &__btnEnvoyer {
     background-color: $bleuMoyen;
     border-radius: 5px;
+    border: none;
     color: white;
     padding: 8px 40px;
     text-decoration: none;
     box-shadow: $bleuPale 4px 4px;
     text-transform: uppercase;
     display: inline-block;
+
     &:hover {
       background-color: $bleuFonce;
       cursor: pointer;
@@ -162,6 +165,7 @@ padding-top: 20px;
   margin-bottom: 20px;
   color: $bleuFonce;
 }
+
 .g-recaptcha {
   display: flex;
   justify-content: center;

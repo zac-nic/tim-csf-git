@@ -550,38 +550,45 @@ a.hyperlien:active {
 */
 /* line 5, sass/base/_bouton.scss */
 .bouton {
-  background-color: #0B61A4;
+  background-color: #083C65;
   border-radius: 5px;
+  border: none;
   color: white;
-  padding: 8px 40px;
+  padding: 8px 10px;
   text-decoration: none;
   box-shadow: #A9DAFF 4px 4px;
   text-transform: uppercase;
   display: inline-block;
-  margin-bottom: 10px; }
-/* line 16, sass/base/_bouton.scss */
+  font-size: 16px;
+  width: 60%;
+  margin: 0 auto 15px auto; }
+@media (min-width: 601px) {
+  /* line 5, sass/base/_bouton.scss */
+  .bouton {
+    margin: 5px;
+    width: 100%; } }
+/* line 23, sass/base/_bouton.scss */
 .bouton--hover {
   background-color: #083C65; }
-/* line 20, sass/base/_bouton.scss */
+/* line 27, sass/base/_bouton.scss */
 .bouton--active {
   background-color: #FF9200;
   box-shadow: #083C65 4px 4px; }
 
-/* line 26, sass/base/_bouton.scss */
+/* line 34, sass/base/_bouton.scss */
 a.bouton {
   background-color: #0B61A4;
   border-radius: 5px;
   color: white;
-  padding: 8px 40px;
   text-decoration: none;
   box-shadow: #A9DAFF 4px 4px;
   text-transform: uppercase;
   display: inline-block; }
-/* line 36, sass/base/_bouton.scss */
+/* line 43, sass/base/_bouton.scss */
 a.bouton:hover {
   background-color: #083C65;
   cursor: pointer; }
-/* line 41, sass/base/_bouton.scss */
+/* line 48, sass/base/_bouton.scss */
 a.bouton:active {
   background-color: #FF9200;
   box-shadow: #083C65 4px 4px; }
@@ -736,32 +743,34 @@ a.bouton:active {
   #en-tete .primary-menu {
     display: flex;
     background-color: white;
-    justify-content: center; } }
+    justify-content: center;
+    padding: 0;
+    width: 500px; } }
 
-/* line 11, sass/modules/_entete.scss */
+/* line 13, sass/modules/_entete.scss */
 #en-tete .primary-menu ul {
   list-style: none;
   margin: 10px 0 10px 10px;
   padding: 0; }
 
-/* line 17, sass/modules/_entete.scss */
+/* line 19, sass/modules/_entete.scss */
 #en-tete .primary-menu li {
   display: inline-block;
-  margin-right: 20px; }
+  margin-right: 10%; }
 
-/* line 22, sass/modules/_entete.scss */
+/* line 24, sass/modules/_entete.scss */
 #en-tete .primary-menu li a {
   color: black;
   text-decoration: none; }
-/* line 26, sass/modules/_entete.scss */
+/* line 28, sass/modules/_entete.scss */
 #en-tete .primary-menu li a:hover {
   color: #083C65; }
-/* line 30, sass/modules/_entete.scss */
+/* line 32, sass/modules/_entete.scss */
 #en-tete .primary-menu li a:active {
   color: #083C65;
   text-decoration: underline; }
 
-/* line 37, sass/modules/_entete.scss */
+/* line 39, sass/modules/_entete.scss */
 #en-tete .mobile-menu {
   display: flex;
   flex-direction: column;
@@ -769,24 +778,24 @@ a.bouton:active {
   padding: 20px;
   text-align: center; }
 @media (min-width: 601px) {
-  /* line 37, sass/modules/_entete.scss */
+  /* line 39, sass/modules/_entete.scss */
   #en-tete .mobile-menu {
     display: none; } }
 
-/* line 51, sass/modules/_entete.scss */
+/* line 53, sass/modules/_entete.scss */
 #en-tete .mobile-menu li {
   list-style-type: none;
   padding: 15px 0; }
 
-/* line 56, sass/modules/_entete.scss */
+/* line 58, sass/modules/_entete.scss */
 #en-tete .mobile-menu li a {
   text-decoration: none; }
 
-/* line 60, sass/modules/_entete.scss */
+/* line 62, sass/modules/_entete.scss */
 .current_page_item {
   text-decoration: underline; }
 
-/* line 64, sass/modules/_entete.scss */
+/* line 66, sass/modules/_entete.scss */
 .entete {
   background-color: #083C65;
   border-bottom: #FF9200 solid 5px;
@@ -795,12 +804,12 @@ a.bouton:active {
   margin: 0;
   min-width: 100%; }
 @media (min-width: 601px) {
-  /* line 64, sass/modules/_entete.scss */
+  /* line 66, sass/modules/_entete.scss */
   .entete {
     padding: 20px 0;
     justify-content: center;
     align-items: end; } }
-/* line 77, sass/modules/_entete.scss */
+/* line 79, sass/modules/_entete.scss */
 .entete__h1 {
   text-align: center;
   color: white;
@@ -808,60 +817,60 @@ a.bouton:active {
   z-index: 10;
   margin: auto auto; }
 @media (min-width: 601px) {
-  /* line 77, sass/modules/_entete.scss */
+  /* line 79, sass/modules/_entete.scss */
   .entete__h1 {
     font-size: 36px;
     margin: 0; } }
-/* line 89, sass/modules/_entete.scss */
+/* line 91, sass/modules/_entete.scss */
 .entete__flex {
   display: flex;
   align-items: flex-end; }
 @media (min-width: 601px) {
-  /* line 89, sass/modules/_entete.scss */
+  /* line 91, sass/modules/_entete.scss */
   .entete__flex {
     align-items: baseline; } }
-/* line 96, sass/modules/_entete.scss */
+/* line 98, sass/modules/_entete.scss */
 .entete__flex--item {
   justify-content: space-evenly; }
 @media (min-width: 601px) {
-  /* line 96, sass/modules/_entete.scss */
+  /* line 98, sass/modules/_entete.scss */
   .entete__flex--item {
     flex-direction: row;
     justify-content: space-around; } }
-/* line 105, sass/modules/_entete.scss */
+/* line 107, sass/modules/_entete.scss */
 .entete__ligneOrange {
   border: #FF9200 3px solid;
   margin: 0; }
 
-/* line 111, sass/modules/_entete.scss */
+/* line 113, sass/modules/_entete.scss */
 .logoTim {
   display: none; }
 @media (min-width: 601px) {
-  /* line 111, sass/modules/_entete.scss */
+  /* line 113, sass/modules/_entete.scss */
   .logoTim {
     display: initial;
     width: 28px;
     height: 28px;
     margin-right: 5px; } }
 
-/* line 122, sass/modules/_entete.scss */
+/* line 124, sass/modules/_entete.scss */
 .logoCegep {
   display: none; }
 @media (min-width: 601px) {
-  /* line 122, sass/modules/_entete.scss */
+  /* line 124, sass/modules/_entete.scss */
   .logoCegep {
     display: initial;
     width: 90px;
     height: 35px;
     margin-left: 30px; } }
-/* line 131, sass/modules/_entete.scss */
+/* line 133, sass/modules/_entete.scss */
 .logoCegep--mobile {
   width: 40%;
   display: flex;
   margin: 0 auto;
   padding: 20px 0; }
 
-/* line 139, sass/modules/_entete.scss */
+/* line 141, sass/modules/_entete.scss */
 .hamburger {
   width: 42px;
   height: 42px;
@@ -871,15 +880,15 @@ a.bouton:active {
   top: 0;
   left: 0;
   z-index: 1; }
-/* line 149, sass/modules/_entete.scss */
+/* line 151, sass/modules/_entete.scss */
 .hamburger:hover {
   cursor: pointer; }
 @media (min-width: 601px) {
-  /* line 139, sass/modules/_entete.scss */
+  /* line 141, sass/modules/_entete.scss */
   .hamburger {
     display: none; } }
 
-/* line 158, sass/modules/_entete.scss */
+/* line 160, sass/modules/_entete.scss */
 .close {
   width: 42px;
   height: 42px;
@@ -888,46 +897,83 @@ a.bouton:active {
   top: 0;
   left: 0;
   z-index: 1; }
-/* line 167, sass/modules/_entete.scss */
+/* line 169, sass/modules/_entete.scss */
 .close:hover {
   cursor: pointer; }
 @media (min-width: 601px) {
-  /* line 158, sass/modules/_entete.scss */
+  /* line 160, sass/modules/_entete.scss */
   .close {
     display: none; } }
 
-/* line 176, sass/modules/_entete.scss */
+/* line 178, sass/modules/_entete.scss */
 #menuClose {
   visibility: hidden; }
 
-/* line 180, sass/modules/_entete.scss */
+/* line 182, sass/modules/_entete.scss */
 #menuHamburger {
   visibility: visible; }
 
-/* line 184, sass/modules/_entete.scss */
+/* line 186, sass/modules/_entete.scss */
 .conteneurMenu {
   position: relative; }
 
-/* line 188, sass/modules/_entete.scss */
+/* line 190, sass/modules/_entete.scss */
 #menuOuvert {
   visibility: hidden; }
 
-/* line 192, sass/modules/_entete.scss */
+/* line 194, sass/modules/_entete.scss */
 .menuOuvert {
   background-color: #083C65;
   position: relative;
   height: 0;
   margin: 0; }
-/* line 198, sass/modules/_entete.scss */
+/* line 200, sass/modules/_entete.scss */
 .menuOuvert a {
   color: white; }
 
+/* line 205, sass/modules/_entete.scss */
+.mobileMenuFlex {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 0 auto; }
+/* line 211, sass/modules/_entete.scss */
+.mobileMenuFlex__reseauxSociaux {
+  padding: 20px 10px;
+  width: 42px;
+  height: 42px; }
+@media (min-width: 601px) {
+  /* line 205, sass/modules/_entete.scss */
+  .mobileMenuFlex {
+    display: none; } }
+
+/* line 222, sass/modules/_entete.scss */
+.menuFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+/* line 227, sass/modules/_entete.scss */
+.menuFlex__reseaux {
+  display: none; }
+@media (min-width: 601px) {
+  /* line 227, sass/modules/_entete.scss */
+  .menuFlex__reseaux {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 10%; } }
+
+/* line 239, sass/modules/_entete.scss */
+.reseauxSociaux {
+  width: 32px;
+  height: 32px; }
+
 /** IMAGES D'EN-TÊTE **/
-/* line 204, sass/modules/_entete.scss */
+/* line 245, sass/modules/_entete.scss */
 .imageEntete {
   width: 100vw; }
 @media (min-width: 601px) {
-  /* line 204, sass/modules/_entete.scss */
+  /* line 245, sass/modules/_entete.scss */
   .imageEntete {
     width: 100%; } }
 
@@ -1030,55 +1076,53 @@ a.bouton:active {
 /* line 61, sass/modules/_accueil.scss */
 .competences__texte1 {
   padding: 10px;
-  margin: 0;
-  background-color: #A9DAFF; }
+  margin: 0; }
 @media (min-width: 601px) {
   /* line 61, sass/modules/_accueil.scss */
   .competences__texte1 {
     min-height: 160px;
     padding: 20px; } }
-/* line 71, sass/modules/_accueil.scss */
+/* line 70, sass/modules/_accueil.scss */
 .competences__texte2 {
   padding: 10px;
-  margin: 0;
-  background-color: #A9DAFF; }
+  margin: 0; }
 @media (min-width: 601px) {
-  /* line 71, sass/modules/_accueil.scss */
+  /* line 70, sass/modules/_accueil.scss */
   .competences__texte2 {
     height: 220px;
     padding: 20px; } }
-/* line 81, sass/modules/_accueil.scss */
+/* line 79, sass/modules/_accueil.scss */
 .competences__image {
   width: 100%; }
 
 @media (min-width: 601px) {
-  /* line 86, sass/modules/_accueil.scss */
+  /* line 84, sass/modules/_accueil.scss */
   .temoignages {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly; } }
-/* line 93, sass/modules/_accueil.scss */
+/* line 91, sass/modules/_accueil.scss */
 .temoignages__infos {
   font-size: 16px; }
 @media (min-width: 601px) {
-  /* line 93, sass/modules/_accueil.scss */
+  /* line 91, sass/modules/_accueil.scss */
   .temoignages__infos {
     display: flex;
     font-size: 18px; } }
-/* line 102, sass/modules/_accueil.scss */
+/* line 100, sass/modules/_accueil.scss */
 .temoignages__flex {
   display: flex;
   flex-direction: column;
   margin: 10px;
   justify-content: center; }
 @media (min-width: 601px) {
-  /* line 102, sass/modules/_accueil.scss */
+  /* line 100, sass/modules/_accueil.scss */
   .temoignages__flex {
     width: 40%; } }
-/* line 111, sass/modules/_accueil.scss */
+/* line 109, sass/modules/_accueil.scss */
 .temoignages__flex p {
   margin: 10px 0; }
-/* line 116, sass/modules/_accueil.scss */
+/* line 114, sass/modules/_accueil.scss */
 .temoignages__conteneur {
   background-color: #083C65;
   color: white;
@@ -1086,47 +1130,47 @@ a.bouton:active {
   display: flex;
   flex-direction: column; }
 @media (min-width: 601px) {
-  /* line 116, sass/modules/_accueil.scss */
+  /* line 114, sass/modules/_accueil.scss */
   .temoignages__conteneur {
     width: 48%; } }
-/* line 127, sass/modules/_accueil.scss */
+/* line 125, sass/modules/_accueil.scss */
 .temoignages__nom {
   font-family: "Bebas Neue";
   font-size: 24px; }
 @media (min-width: 601px) {
-  /* line 127, sass/modules/_accueil.scss */
+  /* line 125, sass/modules/_accueil.scss */
   .temoignages__nom {
     font-size: 32px; } }
-/* line 135, sass/modules/_accueil.scss */
+/* line 133, sass/modules/_accueil.scss */
 .temoignages__image {
   width: 100%; }
 @media (min-width: 601px) {
-  /* line 135, sass/modules/_accueil.scss */
+  /* line 133, sass/modules/_accueil.scss */
   .temoignages__image {
     margin: 10px 0 0 10px;
     width: 60%; } }
-/* line 143, sass/modules/_accueil.scss */
+/* line 141, sass/modules/_accueil.scss */
 .temoignages__temoignage {
   padding: 10px;
   font-size: 16px; }
 @media (min-width: 601px) {
-  /* line 143, sass/modules/_accueil.scss */
+  /* line 141, sass/modules/_accueil.scss */
   .temoignages__temoignage {
     font-size: 18px; } }
-/* line 151, sass/modules/_accueil.scss */
+/* line 149, sass/modules/_accueil.scss */
 .temoignages__entreprise {
   color: white; }
 
-/* line 157, sass/modules/_accueil.scss */
+/* line 155, sass/modules/_accueil.scss */
 .etudiantUnJour, .profil, .grilleCours, .questions {
   text-align: center; }
 @media (min-width: 601px) {
-  /* line 157, sass/modules/_accueil.scss */
+  /* line 155, sass/modules/_accueil.scss */
   .etudiantUnJour, .profil, .grilleCours, .questions {
     width: 50%;
     margin: 0 auto; } }
 
-/* line 165, sass/modules/_accueil.scss */
+/* line 163, sass/modules/_accueil.scss */
 .facebook {
   display: flex;
   justify-content: center;
@@ -1135,28 +1179,58 @@ a.bouton:active {
   overflow: scroll;
   height: 400px; }
 @media (min-width: 601px) {
-  /* line 165, sass/modules/_accueil.scss */
+  /* line 163, sass/modules/_accueil.scss */
   .facebook {
     width: 60%; } }
 
-/* line 177, sass/modules/_accueil.scss */
+/* line 175, sass/modules/_accueil.scss */
 .inscrire {
   color: white;
   background-color: #083C65;
   padding: 10px; }
 @media (min-width: 601px) {
-  /* line 177, sass/modules/_accueil.scss */
+  /* line 175, sass/modules/_accueil.scss */
   .inscrire {
     width: 60%;
     margin: 0 auto;
     padding: 10px 30px 30px 30px; } }
 
-/* line 188, sass/modules/_accueil.scss */
+/* line 186, sass/modules/_accueil.scss */
+.btnLargeur {
+  width: 70%; }
+@media (min-width: 601px) {
+  /* line 186, sass/modules/_accueil.scss */
+  .btnLargeur {
+    width: 35%; } }
+
+/* line 193, sass/modules/_accueil.scss */
 .convaincu {
   background-color: #A9DAFF;
   text-align: center;
   padding: 10px;
   margin-top: 30px; }
+
+/* line 200, sass/modules/_accueil.scss */
+.programmation {
+  background-color: #2652b3;
+  color: white; }
+
+/* line 205, sass/modules/_accueil.scss */
+.integration {
+  background-color: #e43f46; }
+
+/* line 209, sass/modules/_accueil.scss */
+.conception {
+  background-color: #1f8741;
+  color: white; }
+
+/* line 214, sass/modules/_accueil.scss */
+.medias {
+  background-color: #eebf3e; }
+
+/* line 218, sass/modules/_accueil.scss */
+.autre {
+  background-color: #ee863b; }
 
 /** Stages **/
 /* line 2, sass/modules/_stages.scss */
@@ -1358,40 +1432,41 @@ a.bouton:active {
   border-radius: 5px;
   padding: 5px;
   resize: none; }
-/* line 130, sass/modules/_nousJoindre.scss */
+/* line 131, sass/modules/_nousJoindre.scss */
 .formulaire__btnEnvoyer {
   background-color: #0B61A4;
   border-radius: 5px;
+  border: none;
   color: white;
   padding: 8px 40px;
   text-decoration: none;
   box-shadow: #A9DAFF 4px 4px;
   text-transform: uppercase;
   display: inline-block; }
-/* line 139, sass/modules/_nousJoindre.scss */
+/* line 142, sass/modules/_nousJoindre.scss */
 .formulaire__btnEnvoyer:hover {
   background-color: #083C65;
   cursor: pointer; }
-/* line 144, sass/modules/_nousJoindre.scss */
+/* line 147, sass/modules/_nousJoindre.scss */
 .formulaire__btnEnvoyer:active {
   background-color: #FF9200;
   box-shadow: #083C65 4px 4px; }
 
-/* line 151, sass/modules/_nousJoindre.scss */
+/* line 154, sass/modules/_nousJoindre.scss */
 .messageErreur {
   color: darkred;
   padding-left: 10px;
   margin-bottom: 10px;
   font-size: 16px; }
 
-/* line 159, sass/modules/_nousJoindre.scss */
+/* line 162, sass/modules/_nousJoindre.scss */
 .messageGeneral {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
   color: #083C65; }
 
-/* line 165, sass/modules/_nousJoindre.scss */
+/* line 169, sass/modules/_nousJoindre.scss */
 .g-recaptcha {
   display: flex;
   justify-content: center; }
@@ -1463,16 +1538,28 @@ a.bouton:active {
 /* line 71, sass/modules/_diplomes.scss */
 .diplomes__image--survol:hover {
   opacity: 1; }
+/* line 77, sass/modules/_diplomes.scss */
+.diplomes__trierPar {
+  text-align: center; }
+/* line 81, sass/modules/_diplomes.scss */
+.diplomes__boutonsTris {
+  display: flex;
+  flex-direction: column; }
+@media (min-width: 601px) {
+  /* line 81, sass/modules/_diplomes.scss */
+  .diplomes__boutonsTris {
+    flex-direction: row;
+    justify-content: space-evenly; } }
 
 /** single-diplomes **/
-/* line 80, sass/modules/_diplomes.scss */
+/* line 94, sass/modules/_diplomes.scss */
 .diplome__profil {
   background-color: #A9DAFF;
   color: black;
   display: flex;
   flex-direction: column;
   margin: 20px 0; }
-/* line 87, sass/modules/_diplomes.scss */
+/* line 101, sass/modules/_diplomes.scss */
 .diplome__profil__nomRetour {
   background-color: #083C65;
   color: white;
@@ -1483,53 +1570,65 @@ a.bouton:active {
   margin: 0 auto;
   width: 100%; }
 @media (min-width: 601px) {
-  /* line 87, sass/modules/_diplomes.scss */
+  /* line 101, sass/modules/_diplomes.scss */
   .diplome__profil__nomRetour {
     flex-direction: row; } }
-/* line 101, sass/modules/_diplomes.scss */
+/* line 115, sass/modules/_diplomes.scss */
 .diplome__profil__titre {
   text-align: center;
   margin-bottom: 0; }
-/* line 106, sass/modules/_diplomes.scss */
+/* line 120, sass/modules/_diplomes.scss */
 .diplome__profil__texte {
   margin: 0 10px 20px 10px; }
-/* line 111, sass/modules/_diplomes.scss */
+/* line 125, sass/modules/_diplomes.scss */
 .diplome__profil__conteneur {
   display: flex;
   flex-direction: column;
   justify-content: center; }
-/* line 118, sass/modules/_diplomes.scss */
+/* line 132, sass/modules/_diplomes.scss */
 .diplome__nom {
   text-align: center; }
-/* line 122, sass/modules/_diplomes.scss */
+/* line 136, sass/modules/_diplomes.scss */
 .diplome__retour {
   color: white;
   margin: 10px;
   display: block;
   text-decoration: none; }
-/* line 128, sass/modules/_diplomes.scss */
+/* line 142, sass/modules/_diplomes.scss */
 .diplome__retour:hover {
   color: #FF9200; }
-/* line 133, sass/modules/_diplomes.scss */
+/* line 147, sass/modules/_diplomes.scss */
 .diplome__image {
   width: 100%;
   height: 100%; }
 @media (min-width: 601px) {
-  /* line 133, sass/modules/_diplomes.scss */
+  /* line 147, sass/modules/_diplomes.scss */
   .diplome__image {
     width: 30%; } }
 @media (min-width: 601px) {
-  /* line 141, sass/modules/_diplomes.scss */
+  /* line 155, sass/modules/_diplomes.scss */
   .diplome__imageTexte {
     display: flex;
     margin: auto 0; } }
-/* line 149, sass/modules/_diplomes.scss */
+/* line 163, sass/modules/_diplomes.scss */
 .diplome__liens {
-  text-align: center; }
-/* line 153, sass/modules/_diplomes.scss */
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 100%; }
+@media (min-width: 601px) {
+  /* line 163, sass/modules/_diplomes.scss */
+  .diplome__liens {
+    flex-direction: row;
+    justify-content: center; } }
+/* line 175, sass/modules/_diplomes.scss */
 .diplome__lien {
-  margin-right: 10px; }
-/* line 157, sass/modules/_diplomes.scss */
+  font-size: 18px; }
+@media (min-width: 601px) {
+  /* line 175, sass/modules/_diplomes.scss */
+  .diplome__lien {
+    width: 20%; } }
+/* line 182, sass/modules/_diplomes.scss */
 .diplome__interets {
   display: flex;
   flex-direction: column;
@@ -1537,29 +1636,29 @@ a.bouton:active {
   flex-flow: wrap;
   justify-content: center; }
 @media (min-width: 601px) {
-  /* line 157, sass/modules/_diplomes.scss */
+  /* line 182, sass/modules/_diplomes.scss */
   .diplome__interets {
     flex-direction: row;
     width: 60%;
     margin: 0 auto; } }
-/* line 170, sass/modules/_diplomes.scss */
+/* line 195, sass/modules/_diplomes.scss */
 .diplome__interets__interet {
   display: flex;
   flex-direction: column;
   width: 30%; }
 @media (min-width: 601px) {
-  /* line 170, sass/modules/_diplomes.scss */
+  /* line 195, sass/modules/_diplomes.scss */
   .diplome__interets__interet {
     width: 20%; } }
-/* line 179, sass/modules/_diplomes.scss */
+/* line 204, sass/modules/_diplomes.scss */
 .diplome__interets__note {
   font-size: 48px; }
 
-/* line 186, sass/modules/_diplomes.scss */
+/* line 211, sass/modules/_diplomes.scss */
 .projets__liste {
   list-style-type: none;
   padding: 0; }
-/* line 191, sass/modules/_diplomes.scss */
+/* line 216, sass/modules/_diplomes.scss */
 .projets__nom {
   text-align: center;
   background-color: #083C65;
@@ -1567,21 +1666,21 @@ a.bouton:active {
   padding: 10px;
   margin: 0; }
 @media (min-width: 601px) {
-  /* line 191, sass/modules/_diplomes.scss */
+  /* line 216, sass/modules/_diplomes.scss */
   .projets__nom {
     font-size: 28px; } }
-/* line 202, sass/modules/_diplomes.scss */
+/* line 227, sass/modules/_diplomes.scss */
 .projets__image {
   width: 100%; }
-/* line 206, sass/modules/_diplomes.scss */
+/* line 231, sass/modules/_diplomes.scss */
 .projets__technologies {
   margin-bottom: 40px;
   text-align: center; }
-/* line 211, sass/modules/_diplomes.scss */
+/* line 236, sass/modules/_diplomes.scss */
 .projets__description {
   margin-top: 20px; }
 @media (min-width: 601px) {
-  /* line 211, sass/modules/_diplomes.scss */
+  /* line 236, sass/modules/_diplomes.scss */
   .projets__description {
     width: 80%;
     margin: 20px auto 0 auto; } }

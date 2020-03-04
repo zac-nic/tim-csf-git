@@ -73,6 +73,20 @@
       }
     }
   }
+
+  &__trierPar {
+    text-align: center;
+  }
+
+  &__boutonsTris {
+    display: flex;
+    flex-direction: column;
+    @media(min-width: $desktop) {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+  }
 }
 
 /** single-diplomes **/
@@ -147,11 +161,22 @@
   }
 
   &__liens {
+    display: flex;
     text-align: center;
+    flex-direction: column;
+    width: 100%;
+    @media(min-width: $desktop) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
   }
 
   &__lien {
-    margin-right: 10px;
+    font-size: 18px;
+    @media(min-width: $desktop){
+      width: 20%;
+    }
   }
 
   &__interets {
@@ -194,7 +219,7 @@
     color: white;
     padding: 10px;
     margin: 0;
-    @media(min-width: $desktop){
+    @media(min-width: $desktop) {
       font-size: 28px;
     }
   }
@@ -210,8 +235,8 @@
 
   &__description {
     margin-top: 20px;
-    @media(min-width: $desktop){
-      width:80%;
+    @media(min-width: $desktop) {
+      width: 80%;
       margin: 20px auto 0 auto;
     }
   }

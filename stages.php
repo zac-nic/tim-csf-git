@@ -41,7 +41,7 @@ Template Name: Stages
                     <br/>
                     Téléphone : (418) 659-6600, poste 6653
                 </p>
-                <a href="" class="bouton">Nous joindre</a>
+                <a href="" class="bouton btnLargeur">Nous joindre</a>
             </div>
         </div>
     </div>

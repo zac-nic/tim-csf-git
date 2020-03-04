@@ -49,19 +49,36 @@
             ?>
         </nav>
         <hr class="entete__ligneOrange"/>
+        <div class="mobileMenuFlex">
+            <a href="https://www.facebook.com/timcsf/" target="_blank" class="mobileMenuFlex__reseauxSociaux">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/facebook_blanc.svg" alt="facebook"/>
+            </a>
+            <a href="https://twitter.com/timcsf" target="_blank" class="mobileMenuFlex__reseauxSociaux">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/twitter_blanc.svg" alt="twitter"/>
+            </a>
+        </div>
+        <hr class="entete__ligneOrange"/>
         <img src="<?php echo get_template_directory_uri(); ?>/images/logoCegep.png" alt="Logo du Cégep de Sainte-Foy"
              class="logoCegep--mobile">
     </div>
-    <nav class="menu__large">
-        <?php
-        wp_nav_menu(array(
-            'menu' => 'navigation',
-            'menu_class' => 'primary-menu',
-        ));
-        ?>
-    </nav>
-
-
+    <div class="menuFlex">
+        <nav class="menu__large">
+            <?php
+            wp_nav_menu(array(
+                'menu' => 'navigation',
+                'menu_class' => 'primary-menu',
+            ));
+            ?>
+        </nav>
+        <div class="menuFlex__reseaux">
+            <a href="https://www.facebook.com/timcsf/" target="_blank" class="reseauxSociaux">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="facebook"/>
+            </a>
+            <a href="https://twitter.com/timcsf" target="_blank" class="reseauxSociaux">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.svg" alt="twitter"/>
+            </a>
+        </div>
+    </div>
 </header>
 
 <div id="content">

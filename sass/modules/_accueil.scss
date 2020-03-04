@@ -61,7 +61,6 @@
   &__texte1 {
     padding: 10px;
     margin: 0;
-    background-color: $bleuPale;
     @media (min-width: $desktop) {
       min-height: 160px;
       padding: 20px;
@@ -71,7 +70,6 @@
   &__texte2 {
     padding: 10px;
     margin: 0;
-    background-color: $bleuPale;
     @media (min-width: $desktop) {
       height: 220px;
       padding: 20px;
@@ -169,7 +167,7 @@
   width: 100%;
   overflow: scroll;
   height: 400px;
-  @media(min-width: $desktop){
+  @media(min-width: $desktop) {
     width: 60%;
   }
 }
@@ -185,9 +183,38 @@
   }
 }
 
+.btnLargeur {
+  width: 70%;
+  @media(min-width: $desktop) {
+    width: 35%;
+  }
+}
+
 .convaincu {
   background-color: $bleuPale;
   text-align: center;
   padding: 10px;
   margin-top: 30px;
+}
+
+.programmation {
+  background-color: rgb(38, 82, 179);
+  color: white;
+}
+
+.integration {
+  background-color: rgb(228, 63, 70);
+}
+
+.conception {
+  background-color: rgb(31, 135, 65);
+  color: white;
+}
+
+.medias {
+  background-color: rgb(238, 191, 62);
+}
+
+.autre {
+  background-color: rgb(238, 134, 59);
 }

@@ -5,6 +5,8 @@
     display: flex;
     background-color: white;
     justify-content: center;
+    padding: 0;
+    width: 500px;
   }
 }
 
@@ -16,7 +18,7 @@
 
 #en-tete .primary-menu li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 10%;
 }
 
 #en-tete .primary-menu li a {
@@ -198,6 +200,45 @@
   & a {
     color: white;
   }
+}
+
+.mobileMenuFlex {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 0 auto;
+
+  &__reseauxSociaux {
+    padding: 20px 10px;
+    width: 42px;
+    height: 42px;
+  }
+
+  @media(min-width: $desktop) {
+    display: none;
+  }
+}
+
+.menuFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  &__reseaux {
+    display: none;
+    @media(min-width: $desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 10%;
+    }
+
+  }
+}
+
+.reseauxSociaux {
+  width: 32px;
+  height: 32px;
 }
 
 /** IMAGES D'EN-TÊTE **/

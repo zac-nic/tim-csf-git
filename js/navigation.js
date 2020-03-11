@@ -13,12 +13,11 @@ window.onload = function () {
     document.getElementById("menuClose").onclick = function () {
         fermerMenu()
     };
+    
     function fermerMenu() {
         document.getElementById("menuHamburger").style.visibility = "visible";
         document.getElementById("menuClose").style.visibility = "hidden";
         document.getElementById("menuOuvert").style.visibility = "hidden";
         document.getElementById("menuOuvert").style.height = "0";
-
     }
-
 };

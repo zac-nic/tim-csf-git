@@ -13,6 +13,7 @@
         <?php endif; ?>
     </title>
     <link rel="stylesheet" href=" <?php bloginfo('stylesheet_url'); ?> ">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Oswald&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

@@ -112,11 +112,10 @@ if (isset($captcha)) :
     $responseKeys = json_decode($response, true);
     if (intval($responseKeys["success"]) === 1):
         if (($nomValide && $courrielValide && $destinataireValide && $sujetValide && $messageValide) === true) :
-            $to = get_option('admin_email');
+            $to = $destinataire;
             $headers = 'De: ' . $courriel . '\r\n' . 'Répondre à: ' . $courriel . '\r\n';
             $envoi = wp_mail($to, $sujet, strip_tags($message), $headers);
             if ($envoi):
-                var_dump("Envoyé: " . $envoi);
                 $messageGeneral = $messagesJson['retroactions']['courriel']['envoyer'];
             else:
                 $messageGeneral = $messagesJson['retroactions']['courriel']['avorter'];
@@ -189,8 +188,7 @@ endif;
                 <label for="destinataire">Destinataire :</label>
                 <select name="destinataire" id="destinataire">
                     <option value="">Choisir un destinataire</option>
-                    <?php foreach ($posts as $post):
-                        var_dump(get_field('courriel_responsable', $post)); ?>
+                    <?php foreach ($posts as $post):?>
                         <option value="<?php echo get_field('courriel_responsable', $post) ?>"
                             <?php if (isset($destinataire)):
                                 if ($destinataire == get_field('courriel_responsable', $post)): ?>

@@ -35,7 +35,7 @@ Template Name: Stages
                     Les stages rémunérés sont admissibles à des crédits d'impôt avantageux. Consultez le profil des
                     compétences des étudiants pour déterminer le stage à offrir:
                 </p>
-                <a href="" class="hyperlien">Télécharger le profil de compétences</a>
+                <a href="<?php echo  get_template_directory_uri();?>/images/profilCompetences.pdf" class="hyperlien" download>Télécharger le profil de compétences</a>
                 <p>
                     Contactez Michelle Decorte pour en savoir plus.
                     <br/>

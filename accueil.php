@@ -9,9 +9,6 @@ Template Name: Accueil
 <div class="conteneurGeneral">
     <hr class="ligneOrange ligneOrange__droite"/>
     <h1 class="accueil__h1">Accueil</h1>
-    <!--    <div class="visionneuse">-->
-    <!--        <h2 class="titre__h2">Galerie de projets</h2>-->
-    <!--    </div>-->
     <hr class="ligneOrange ligneOrange__gauche"/>
     <div class="cestQuoi">
         <div class="carreBleu">

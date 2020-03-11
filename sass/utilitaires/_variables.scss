@@ -4,14 +4,8 @@
 
 /** Polices de caractères **/
 
-@font-face {
-  font-family: Bebas Neue, sans-serif;
-  src: 	url('../../fonts/BebasNeue-Regular.ttf') format('truetype');
-  src: 	url('../../fonts/Oswald-Regular.ttf') format('truetype');
-}
-
-$fontePrimaire : Bebas Neue, sans-serif;
-$fonteSecondaire : Oswald, sans-serif;
+$fontePrimaire: 'Bebas Neue', cursive;
+$fonteSecondaire: 'Oswald';
 
 /** Palette de couleurs **/
 // Utiliser http://chir.ag/projects/name-that-color pour obtenir des noms uniques et mémorisables
@@ -27,4 +21,4 @@ $orange: #FF9200;
 $hyperlien: $bleuFonce;
 
 /** Points de rupture **/
-$desktop : 601px;
+$desktop: 601px;
